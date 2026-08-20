@@ -1,0 +1,822 @@
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%}
+body{overflow:hidden}
+.click-area{position:relative;width:100%;height:200px;background:#ffea00;cursor:pointer;border-top:1px solid #000;border-bottom:1px solid #000;overflow:hidden}
+.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;font-family:"DINProCondensed",sans-serif;color:#000}
+.headline{position:absolute;left:-1.5px;top:28px;width:562px;height:101px;font-weight:700;font-size:53px;line-height:.94;letter-spacing:-.7px;text-transform:uppercase;white-space:nowrap}
+.headline-line{position:relative;opacity:0;transform:translateY(34px)}
+.line-one{animation:lineOne 12s infinite}
+.line-two{animation:lineTwo 12s infinite}
+.price{position:absolute;left:544px;top:21px;height:99px;display:flex;align-items:flex-end;white-space:nowrap;font-weight:700;opacity:0;transform:translateY(34px);animation:priceIn 12s infinite}
+.price-prefix,.price-suffix{font-size:46px;line-height:.74;padding-bottom:0}
+.price-prefix{margin-right:9px}
+.price-number{font-size:130px;line-height:.74;letter-spacing:-4px}
+.price-suffix{margin-left:10px}
+.logo{position:absolute;left:0;bottom:0;width:53.3px;height:48.7px;object-fit:cover;opacity:0;animation:softIn 12s infinite}
+.site{position:absolute;left:87.3px;top:164px;width:120px;height:21px;font-size:25px;line-height:21px;font-weight:500;white-space:nowrap;opacity:0;animation:softIn 12s infinite}
+.divider{position:absolute;left:238.3px;top:163.6px;width:3px;height:22.9px;opacity:0;animation:softIn 12s infinite}
+.phone{position:absolute;left:269px;top:163px;width:154px;height:22px;font-size:24px;line-height:22px;font-weight:500;white-space:nowrap;opacity:0;animation:softIn 12s infinite}
+.disclaimer{position:absolute;right:auto;top:162.6px;width:auto;height:auto;font-size:11px;line-height:1.12;font-weight:500;text-transform:uppercase;white-space:normal;text-align:left;opacity:0;animation:softIn 12s infinite;
+  white-space:normal; overflow:visible; line-height:1.12;
+  left:544px;
+  bottom:auto;
+  z-index:20;
+  display:block;
+  visibility:visible;}
+.more{position:absolute;right:9.4px;top:65.7px;width:187.5px;height:49.3px;opacity:0;transform:scale(0);transform-origin:50% 50%;animation:moreIn 12s infinite}
+
+@keyframes lineOne{
+  0%,3%{opacity:0;transform:translateY(34px)}
+  9%{opacity:1;transform:translateY(-3px)}
+  12%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes lineTwo{
+  0%,5%{opacity:0;transform:translateY(34px)}
+  11%{opacity:1;transform:translateY(-3px)}
+  14%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes priceIn{
+  0%,5%{opacity:0;transform:translateY(34px)}
+  11%{opacity:1;transform:translateY(-3px)}
+  14%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes softIn{
+  0%,12%{opacity:0}
+  18%,81.33%{opacity:1}
+  89.33%,100%{opacity:0}
+}
+@keyframes disclaimerIn{
+  0%,15%{opacity:0}
+  21%,81.33%{opacity:1}
+  89.33%,100%{opacity:0}
+}
+@keyframes moreIn{
+  0%,12%{opacity:0;transform:scale(0)}
+  17%{opacity:1;transform:scale(1.06)}
+  20%,81.33%{opacity:1;transform:scale(1)}
+  89.33%,100%{opacity:0;transform:scale(1)}
+}
+
+
+/* === MOBILE 320x60 OVERRIDE === */
+html,body{margin:0;width:320px;height:60px;overflow:hidden}
+.banner,.click-area,.container{width:320px!important;height:60px!important;overflow:hidden!important}
+.banner{position:relative}
+
+/* Frame 1: all desktop elements except disclaimer */
+.headline{
+  left:3px!important;top:7px!important;width:135px!important;height:auto!important;
+  font-size:13px!important;line-height:.94!important;letter-spacing:-.15px!important;
+  white-space:normal!important;z-index:8
+}
+.price{
+  left:142px!important;top:7px!important;width:72px!important;height:26px!important;
+  display:flex!important;align-items:flex-end!important;gap:1px!important;z-index:8
+}
+.price .from,.price .suffix,.price .unit{font-size:8px!important;line-height:1!important}
+.price .number,.price .num{font-size:19px!important;line-height:.84!important}
+.logo{
+  left:3px!important;bottom:3px!important;width:24px!important;height:22px!important;
+  object-fit:contain!important;z-index:10
+}
+.site{left:32px!important;bottom:8px!important;font-size:7px!important;line-height:1!important;z-index:8}
+.divider,.vertical-line,.line{
+  left:91px!important;bottom:5px!important;width:2px!important;height:15px!important;z-index:8
+}
+.phone{left:97px!important;bottom:7px!important;font-size:8px!important;line-height:1!important;z-index:8}
+.more,.details,.podrobnee{
+  right:4px!important;top:7px!important;width:98px!important;height:24px!important;z-index:8
+}
+
+/* Frame 2: logo remains in exactly the same place; disclaimer replaces frame-1 content */
+.disclaimer{
+  left:34px!important;right:4px!important;top:5px!important;bottom:auto!important;
+  width:282px!important;height:50px!important;
+  font-size:10px!important;line-height:1.02!important;letter-spacing:-.32px!important;
+  text-align:left!important;white-space:normal!important;overflow:hidden!important;
+  z-index:30!important
+}
+
+/* Two-frame timeline. Frame 1 ~0-55%, transition, Frame 2 ~60-92%, common fade-out. */
+.headline,.price,.site,.phone,.divider,.vertical-line,.line,.more,.details,.podrobnee{
+  animation:mobileFrame1 9s infinite!important
+}
+.logo{animation:mobileLogo 9s infinite!important}
+.disclaimer{animation:mobileDisclaimer 9s infinite!important}
+
+@keyframes mobileFrame1{
+  0%{opacity:0}
+  7%{opacity:1}
+  52%{opacity:1}
+  58%{opacity:0}
+  100%{opacity:0}
+}
+@keyframes mobileLogo{
+  0%{opacity:0}
+  7%{opacity:1}
+  92%{opacity:1}
+  98%,100%{opacity:0}
+}
+@keyframes mobileDisclaimer{
+  0%,55%{opacity:0}
+  61%{opacity:1}
+  92%{opacity:1}
+  98%,100%{opacity:0}
+}
+
+
+/* === MOBILE 320x60 LAYOUT FIX V2 === */
+
+/* Page itself has no assigned background color */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 60px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow: hidden !important;
+}
+
+/* Outer clickable area spans the full page width */
+.click-area {
+  position: relative !important;
+  width: 100% !important;
+  height: 60px !important;
+  min-height: 60px !important;
+  max-height: 60px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #FFEA00 !important;
+  background-color: #FFEA00 !important;
+  overflow: hidden !important;
+}
+
+/* Inner banner remains 320x60 and is centered */
+.banner,
+.container {
+  position: relative !important;
+  width: 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
+  height: 60px !important;
+  min-height: 60px !important;
+  max-height: 60px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+/* Ensure all frame elements stay completely inside the 320x60 banner.
+   Every element starts above the 18px threshold from the top. */
+.headline {
+  top: 4px !important;
+  left: 3px !important;
+  max-height: 22px !important;
+  overflow: hidden !important;
+}
+
+.price {
+  top: 4px !important;
+  left: 142px !important;
+  height: 24px !important;
+  overflow: hidden !important;
+}
+
+.more,
+.details,
+.podrobnee {
+  top: 4px !important;
+  right: 4px !important;
+  height: 22px !important;
+  overflow: hidden !important;
+}
+
+.logo {
+  top: 31px !important;
+  bottom: auto !important;
+  left: 3px !important;
+  width: 24px !important;
+  height: 22px !important;
+  overflow: visible !important;
+}
+
+.site {
+  top: 40px !important;
+  bottom: auto !important;
+  left: 32px !important;
+}
+
+.divider,
+.vertical-line,
+.line {
+  top: 35px !important;
+  bottom: auto !important;
+  left: 91px !important;
+  height: 15px !important;
+}
+
+.phone {
+  top: 40px !important;
+  bottom: auto !important;
+  left: 97px !important;
+}
+
+.disclaimer {
+  top: 4px !important;
+  bottom: auto !important;
+  left: 34px !important;
+  right: 4px !important;
+  width: auto !important;
+  height: 52px !important;
+  max-height: 52px !important;
+  overflow: hidden !important;
+}
+
+/* Guard against descendants escaping the banner bounds */
+.banner *,
+.container * {
+  box-sizing: border-box !important;
+}
+
+
+/* === PRICE VISIBILITY FIX V3 === */
+.price {
+  left: 140px !important;
+  top: 3px !important;
+  width: 78px !important;
+  height: 27px !important;
+  max-width: 78px !important;
+  max-height: 27px !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 1px !important;
+}
+.price .from,
+.price .suffix,
+.price .unit {
+  display: inline-block !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+.price .number,
+.price .num {
+  display: inline-block !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+
+/* === MOBILE COMPOSITION UPDATE V4 === */
+/* Price block reduced 5x as a whole, keeping its current anchor point. */
+.price {
+  transform: scale(0.2) !important;
+  transform-origin: left top !important;
+  overflow: visible !important;
+}
+
+/* Remove phone, site and vertical divider completely. */
+.phone,
+.site,
+.divider,
+.vertical-line,
+.line {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+
+/* === LOGO POSITION FIX V5 === */
+.logo {
+  left: auto !important;
+  right: 3px !important;
+  top: 3px !important;
+  bottom: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+
+/* === DISCLAIMER POSITION V6 === */
+.disclaimer {
+  left: 5px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 5px !important;
+  width: 282px !important;
+  max-height: 50px !important;
+}
+
+
+/* === DISCLAIMER VISIBLE BASELINE FIX V7 === */
+.disclaimer {
+  bottom: 0px !important;
+}
+
+
+/* === DISCLAIMER SIZE/POSITION V8 === */
+.disclaimer {
+  font-size: 9px !important;
+  line-height: 1.02 !important;
+  top: 17px !important;
+  bottom: auto !important;
+  height: 40px !important;
+  max-height: 40px !important;
+  overflow: hidden !important;
+}
+
+
+/* === MOBILE FRAME 1 VISIBILITY + LOGO TOP ALIGN V9 === */
+
+/* Logo flush with banner top edge */
+.logo {
+  top: 0px !important;
+  right: 3px !important;
+  bottom: auto !important;
+}
+
+/* Ensure all frame-1 text is fully visible inside 320x60 */
+.headline {
+  top: 3px !important;
+  left: 3px !important;
+  width: 132px !important;
+  height: auto !important;
+  max-height: none !important;
+  font-size: 12px !important;
+  line-height: .96 !important;
+  letter-spacing: -0.1px !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+.price {
+  left: 138px !important;
+  top: 4px !important;
+  width: 82px !important;
+  height: 25px !important;
+  max-width: none !important;
+  max-height: none !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  transform: scale(0.2) !important;
+  transform-origin: left top !important;
+}
+
+.price,
+.price * {
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.more,
+.details,
+.podrobnee {
+  top: 30px !important;
+  right: 4px !important;
+  width: 98px !important;
+  height: 22px !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Keep frame-1 elements inside banner bounds */
+.banner,
+.container {
+  overflow: hidden !important;
+}
+
+
+/* === MOBILE POSITION UPDATE V10 === */
+
+/* Visible top edge of headline below 19px from banner top */
+.headline {
+  left: 3px !important;
+  top: 20px !important;
+  width: 132px !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Price block aligned to the visible bottom edge of the headline.
+   It remains reduced 5x and uses bottom anchoring within frame 1. */
+.price {
+  left: 138px !important;
+  top: 20px !important;
+  width: 82px !important;
+  height: 25px !important;
+  transform: scale(0.2) !important;
+  transform-origin: left bottom !important;
+  overflow: visible !important;
+}
+
+/* Details button directly under the top-right logo */
+.more,
+.details,
+.podrobnee {
+  right: 3px !important;
+  left: auto !important;
+  top: 24px !important;
+  width: 98px !important;
+  height: 22px !important;
+  overflow: visible !important;
+}
+
+/* Logo stays fixed in top-right corner */
+.logo {
+  right: 3px !important;
+  top: 0px !important;
+  left: auto !important;
+  bottom: auto !important;
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+
+/* === PODROBNEE VISIBILITY FIX V11 === */
+img[src*="podrobnee.svg"],
+.more,
+.details,
+.podrobnee {
+  position: absolute !important;
+  display: block !important;
+  right: 3px !important;
+  left: auto !important;
+  top: 25px !important;
+  width: 98px !important;
+  height: 22px !important;
+  max-width: 98px !important;
+  max-height: 22px !important;
+  overflow: visible !important;
+  z-index: 40 !important;
+  transform: none !important;
+}
+
+/* Keep frame-1 animation, but do not let previous keyframes permanently hide the button */
+img[src*="podrobnee.svg"] {
+  animation: mobileFrame1 9s infinite !important;
+}
+
+
+/* === MOBILE SIZE / FRAME UPDATE V12 === */
+
+/* Headline +2px, keep same vertical position relative to top edge */
+.headline {
+  top: 20px !important;
+  font-size: 14px !important;
+  line-height: .96 !important;
+  overflow: visible !important;
+}
+
+/* Price block +20% from previous scale 0.2 -> 0.24 */
+.price {
+  transform: scale(0.24) !important;
+  transform-origin: left bottom !important;
+}
+
+/* "Подробнее" reduced 2x and shown only during frame 1 */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  width: 49px !important;
+  height: 11px !important;
+  right: 3px !important;
+  top: 25px !important;
+  transform: none !important;
+  z-index: 40 !important;
+  animation: mobileDetailsFrame1 9s infinite !important;
+}
+
+@keyframes mobileDetailsFrame1 {
+  0% { opacity: 0; visibility: hidden; }
+  7% { opacity: 1; visibility: visible; }
+  52% { opacity: 1; visibility: visible; }
+  58% { opacity: 0; visibility: hidden; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+
+/* === MOBILE POSITION / SIZE UPDATE V13 === */
+
+/* Headline forced into exactly two lines */
+.headline {
+  left: 3px !important;
+  top: 20px !important;
+  width: 132px !important;
+  font-size: 14px !important;
+  line-height: .96 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* Price: 20px further right */
+.price {
+  left: 158px !important;
+  transform: scale(0.24) !important;
+  transform-origin: left bottom !important;
+}
+
+/* Details: +20% from 49x11 -> about 59x13px */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  width: 59px !important;
+  height: 13px !important;
+  right: 3px !important;
+  top: 25px !important;
+  animation: mobileDetailsFrame1 9s infinite !important;
+}
+
+
+/* === TWO-LINE HEADLINE + FRAME-1 DETAILS SYNC V14 === */
+.headline {
+  left: 3px !important;
+  top: 20px !important;
+  width: 150px !important;
+  font-size: 14px !important;
+  line-height: .96 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+.headline br {
+  display: block !important;
+}
+
+/* "Подробнее" follows exactly the same visibility timeline as frame-1 elements */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  animation: mobileFrame1 9s infinite !important;
+  animation-fill-mode: both !important;
+}
+
+/* Explicitly prevent stale opacity/visibility rules from keeping it on frame 2 */
+@keyframes mobileFrame1 {
+  0%   { opacity:0; visibility:hidden; }
+  7%   { opacity:1; visibility:visible; }
+  52%  { opacity:1; visibility:visible; }
+  58%  { opacity:0; visibility:hidden; }
+  100% { opacity:0; visibility:hidden; }
+}
+
+
+/* === STRICT TWO-LINE HEADLINE FIX V15 === */
+.headline {
+  left: 3px !important;
+  top: 20px !important;
+  width: 205px !important;
+  max-width: 205px !important;
+  height: 28px !important;
+  font-size: 14px !important;
+  line-height: .96 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+.headline br {
+  display: block !important;
+  content: "" !important;
+}
+
+
+/* === HEADLINE WIDTH UPDATE V16 === */
+.headline {
+  width: 455px !important;
+  max-width: 455px !important;
+}
+
+/* === FRAME TRANSITION UPDATE V17 === */
+/* Frame 1 blocks stay static and disappear simultaneously, with no movement. */
+.headline {
+  transform: none !important;
+  animation: mobileFrame1Static 9s infinite !important;
+}
+.price {
+  transform: scale(0.24) !important;
+  transform-origin: left bottom !important;
+  animation: mobileFrame1Static 9s infinite !important;
+}
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  transform: none !important;
+  animation: mobileFrame1Static 9s infinite !important;
+}
+
+@keyframes mobileFrame1Static {
+  0%   { opacity:0; visibility:hidden; }
+  7%   { opacity:1; visibility:visible; }
+  52%  { opacity:1; visibility:visible; }
+  58%  { opacity:0; visibility:hidden; }
+  100% { opacity:0; visibility:hidden; }
+}
+
+/* Details button belongs to frame 1 only and is fully absent on frame 2. */
+.disclaimer { animation: mobileDisclaimer 9s infinite !important; }
+
+
+/* === DETAILS FRAME-2 HIDE FIX V18 === */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  animation: mobileFrame1Static 9s infinite !important;
+  animation-fill-mode: both !important;
+}
+
+/* === TYPOGRAPHY / ALIGNMENT / ENTRY MOTION UPDATE V20 === */
+/* Headline +2px from v19. */
+.headline {
+  font-size: 16px !important;
+  transform: none !important;
+  animation: mobileHeadlineFrameV20 9s infinite !important;
+}
+
+/* Smaller headline entry amplitude; exit remains static/synchronized. */
+.headline-line {
+  position: relative !important;
+  opacity: 0;
+  transform: translateY(10px);
+}
+.line-one {
+  animation: mobileLineOneV20 9s infinite !important;
+}
+.line-two {
+  animation: mobileLineTwoV20 9s infinite !important;
+}
+
+/* Price uses the same entry motion character as line two, while keeping
+   its existing earlier appearance timing and mobile scale. */
+.price {
+  transform-origin: left bottom !important;
+  animation: mobilePriceLikeLineTwoV20 9s infinite !important;
+}
+
+/* Align details button bottom edge with the visible bottom edge of price:
+   price bottom = top 20px + 25px = 45px; button height = 13px => top 32px. */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  top: 32px !important;
+  animation: mobileFrame1Static 9s infinite !important;
+  animation-fill-mode: both !important;
+}
+
+@keyframes mobileHeadlineFrameV20 {
+  0%,52%  { opacity:1; visibility:visible; }
+  58%,100% { opacity:0; visibility:hidden; }
+}
+
+@keyframes mobileLineOneV20 {
+  0%,3%   { opacity:0; transform:translateY(10px); }
+  9%      { opacity:1; transform:translateY(-1px); }
+  12%,52% { opacity:1; transform:translateY(0); }
+  58%,100%{ opacity:0; transform:translateY(0); }
+}
+
+@keyframes mobileLineTwoV20 {
+  0%,5%   { opacity:0; transform:translateY(10px); }
+  11%     { opacity:1; transform:translateY(-1px); }
+  14%,52% { opacity:1; transform:translateY(0); }
+  58%,100%{ opacity:0; transform:translateY(0); }
+}
+
+@keyframes mobilePriceLikeLineTwoV20 {
+  0%      { opacity:0; visibility:hidden; transform:translateY(10px) scale(0.24); }
+  7%      { opacity:1; visibility:visible; transform:translateY(-1px) scale(0.24); }
+  10%,52% { opacity:1; visibility:visible; transform:translateY(0) scale(0.24); }
+  58%,100%{ opacity:0; visibility:hidden; transform:translateY(0) scale(0.24); }
+}
+
+/* === DETAILS RIGHT VISIBLE EDGE FIX V21 === */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  right: 3px !important;
+  left: auto !important;
+}
+
+/* === DETAILS POSITION V22 === */
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  right: 0 !important;
+}
+
+/* === PRICE + DETAILS ALIGN TO HEADLINE LINE 2 V23 === */
+/* Headline top 20px, 16px font, line-height .96 => second visible line bottom ~51px. */
+.price {
+  top: 26px !important;
+}
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  top: 38px !important;
+}
+
+/* === POSITION ADJUSTMENTS V24 === */
+.price {
+  left: 147px !important;
+}
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  right: -2px !important;
+  left: auto !important;
+}
+
+/* === PRICE POSITION V25 === */
+.price {
+  left: 152px !important;
+}
+
+/* === PRICE POSITION V26 === */
+.price {
+  left: 162px !important;
+}
+
+
+/* === POSITION / DISCLAIMER V27 === */
+.price {
+  top: 24px !important;
+}
+.disclaimer {
+  top: 17px !important;
+  font-size: 10px !important;
+  line-height: 0.96 !important;
+}
+
+/* === PRICE SCALE V28: +5% === */
+.price {
+  transform-origin: left bottom !important;
+}
+@keyframes mobilePriceLikeLineTwoV28 {
+  0%, 17%   { opacity: 0; transform: translateY(10px) scale(0.252); }
+  24%, 55%  { opacity: 1; transform: translateY(0) scale(0.252); }
+  60%, 100% { opacity: 0; transform: translateY(0) scale(0.252); }
+}
+.price {
+  animation: mobilePriceLikeLineTwoV28 9s infinite !important;
+}
+
+
+/* === FRAME 1 ANIMATION REDESIGN V29 === */
+
+/* Price: exactly follows headline line 2 timing/motion, preserving v28 scale. */
+@keyframes mobilePriceSyncLineTwoV29 {
+  0%,5%   { opacity:0; visibility:hidden; transform:translateY(10px) scale(0.252); }
+  11%     { opacity:1; visibility:visible; transform:translateY(-1px) scale(0.252); }
+  14%,52% { opacity:1; visibility:visible; transform:translateY(0) scale(0.252); }
+  58%,100%{ opacity:0; visibility:hidden; transform:translateY(0) scale(0.252); }
+}
+.price {
+  animation: mobilePriceSyncLineTwoV29 9s infinite !important;
+  transform-origin: left bottom !important;
+}
+
+/* Details: scale from center with a short overshoot/bounce. */
+@keyframes mobileDetailsBounceV29 {
+  0%,6%   { opacity:0; visibility:hidden; transform:scale(0); }
+  10%     { opacity:1; visibility:visible; transform:scale(1.12); }
+  13%     { opacity:1; visibility:visible; transform:scale(0.96); }
+  16%,52% { opacity:1; visibility:visible; transform:scale(1); }
+  58%,100%{ opacity:0; visibility:hidden; transform:scale(1); }
+}
+.more,
+.details,
+.podrobnee,
+img[src*="podrobnee.svg"] {
+  animation: mobileDetailsBounceV29 9s infinite !important;
+  animation-fill-mode: both !important;
+  transform-origin: center center !important;
+}
+
+/* Frame change: frame-1 elements fully disappear first; disclaimer fades in after. */
+@keyframes mobileDisclaimerV29 {
+  0%,60%  { opacity:0; visibility:hidden; }
+  67%     { opacity:1; visibility:visible; }
+  92%     { opacity:1; visibility:visible; }
+  98%,100%{ opacity:0; visibility:hidden; }
+}
+.disclaimer {
+  animation: mobileDisclaimerV29 9s infinite !important;
+}
