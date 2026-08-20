@@ -1,0 +1,63 @@
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%}
+body{overflow:hidden}
+.click-area{position:relative;width:100%;height:200px;background:#ffea00;cursor:pointer;border-top:1px solid #000;border-bottom:1px solid #000;overflow:hidden}
+.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;font-family:"DINProCondensed",sans-serif;color:#000}
+.headline{position:absolute;left:-1.5px;top:28px;width:562px;height:101px;font-weight:700;font-size:53px;line-height:.94;letter-spacing:-.7px;text-transform:uppercase;white-space:nowrap}
+.headline-line{position:relative;opacity:0;transform:translateY(34px)}
+.line-one{animation:lineOne 12s infinite}
+.line-two{animation:lineTwo 12s infinite}
+.price{position:absolute;left:544px;top:21px;height:99px;display:flex;align-items:flex-end;white-space:nowrap;font-weight:700;opacity:0;transform:translateY(34px);animation:priceIn 12s infinite}
+.price-prefix,.price-suffix{font-size:46px;line-height:.74;padding-bottom:0}
+.price-prefix{margin-right:9px}
+.price-number{font-size:130px;line-height:.74;letter-spacing:-4px}
+.price-suffix{margin-left:10px}
+.logo{position:absolute;left:0;bottom:0;width:53.3px;height:48.7px;object-fit:cover;opacity:0;animation:softIn 12s infinite}
+.site{position:absolute;left:87.3px;top:164px;width:120px;height:21px;font-size:25px;line-height:21px;font-weight:500;white-space:nowrap;opacity:0;animation:softIn 12s infinite}
+.divider{position:absolute;left:238.3px;top:163.6px;width:3px;height:22.9px;opacity:0;animation:softIn 12s infinite}
+.phone{position:absolute;left:269px;top:163px;width:154px;height:22px;font-size:24px;line-height:22px;font-weight:500;white-space:nowrap;opacity:0;animation:softIn 12s infinite}
+.disclaimer{position:absolute;right:auto;top:162.6px;width:auto;height:auto;font-size:11px;line-height:1.12;font-weight:500;text-transform:uppercase;white-space:normal;text-align:left;opacity:0;animation:softIn 12s infinite;
+  white-space:normal; overflow:visible; line-height:1.12;
+  left:544px;
+  bottom:auto;
+  z-index:20;
+  display:block;
+  visibility:visible;}
+.more{position:absolute;right:9.4px;top:65.7px;width:187.5px;height:49.3px;opacity:0;transform:scale(0);transform-origin:50% 50%;animation:moreIn 12s infinite}
+
+@keyframes lineOne{
+  0%,3%{opacity:0;transform:translateY(34px)}
+  9%{opacity:1;transform:translateY(-3px)}
+  12%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes lineTwo{
+  0%,5%{opacity:0;transform:translateY(34px)}
+  11%{opacity:1;transform:translateY(-3px)}
+  14%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes priceIn{
+  0%,5%{opacity:0;transform:translateY(34px)}
+  11%{opacity:1;transform:translateY(-3px)}
+  14%,81.33%{opacity:1;transform:translateY(0)}
+  89.33%,100%{opacity:0;transform:translateY(0)}
+}
+@keyframes softIn{
+  0%,12%{opacity:0}
+  18%,81.33%{opacity:1}
+  89.33%,100%{opacity:0}
+}
+@keyframes disclaimerIn{
+  0%,15%{opacity:0}
+  21%,81.33%{opacity:1}
+  89.33%,100%{opacity:0}
+}
+@keyframes moreIn{
+  0%,12%{opacity:0;transform:scale(0)}
+  17%{opacity:1;transform:scale(1.06)}
+  20%,81.33%{opacity:1;transform:scale(1)}
+  89.33%,100%{opacity:0;transform:scale(1)}
+}
