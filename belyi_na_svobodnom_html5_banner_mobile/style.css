@@ -1,0 +1,40 @@
+@font-face{font-family:"Fontfabric-Nexa-Bold";src:url("fonts/Fontfabric-Nexa-Bold.otf") format("opentype");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"PFDinTextCondPro-Medium";src:url("fonts/PFDinTextCondPro-Medium.ttf") format("truetype");font-style:normal;font-weight:500;font-display:swap}
+*{box-sizing:border-box}
+html,body{width:100%;height:60px;margin:0;padding:0;overflow:hidden}
+body{font-family:"PFDinTextCondPro-Medium",sans-serif}
+.click-area{position:relative;width:100%;height:60px;overflow:hidden;background:#fff;cursor:pointer}
+.click-area::before,.click-area::after{content:"";position:absolute;left:0;width:100%;height:1px;background:#d8d8d8;z-index:90;pointer-events:none}
+.click-area::before{top:0}.click-area::after{bottom:0}
+.banner{position:absolute;top:0;left:50%;width:320px;height:60px;overflow:hidden;transform:translateX(-50%);pointer-events:none;background:#fff}
+
+.frame1{position:absolute;inset:0;z-index:60;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at center,rgba(255,255,255,.26) 0%,rgba(255,255,255,.16) 18%,rgba(255,255,255,.08) 34%,rgba(255,255,255,0) 62%),linear-gradient(180deg,#205395 0%,#1877AF 52%,#1D5D9B 100%);opacity:0;will-change:opacity;animation:frame1-window 15s linear infinite}
+.frame1::before,.frame1::after{content:none}
+.frame1-group{position:absolute;inset:0;z-index:2;width:320px;height:60px}
+.frame1-photo{position:absolute;display:block;overflow:visible;opacity:0;will-change:opacity}
+.frame1-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.frame1-left{left:38px;top:2px;width:92px;height:56px;animation:frame1-left 15s linear infinite}
+.frame1-left img{object-position:center center;transform:scale(1.08);transform-origin:center center}
+.frame1-right{left:231px;top:0;width:39px;height:60px;animation:frame1-right 15s linear infinite}
+.frame1-right img{object-position:center bottom;transform:translateY(6px) scale(1.08);transform-origin:center bottom}
+.frame1-center-logo{display:block;position:absolute;left:50%;top:50%;z-index:2;width:auto;height:36px;transform:translate(-50%,-50%) scale(.82);transform-origin:center center;opacity:0;will-change:opacity,transform;animation:frame1-logo 15s linear infinite}
+
+.persistent-developer-logo{position:absolute;left:15px;top:calc(50% + 2px);z-index:80;width:auto;max-width:295px;height:27px;opacity:1;transform:translateY(-50%)}
+.carry-disclaimer{position:absolute;left:64px;top:calc(50% + 2px);z-index:85;width:241px;min-height:16px;color:#fff;font-family:"PFDinTextCondPro-Medium",sans-serif;font-size:10px;font-weight:500;line-height:.9;text-align:left;text-transform:uppercase;white-space:normal;text-wrap:balance;text-shadow:0 1px 2px rgba(0,0,0,.28);opacity:0;transform:translateY(-50%);will-change:opacity;animation:carry-disclaimer 15s linear infinite}
+
+.photo-stage{position:absolute;top:0;left:0;width:320px;height:60px;overflow:hidden;z-index:10}
+.photo{position:absolute;top:0;left:0;width:320px;height:60px;object-fit:cover;opacity:0;will-change:opacity,transform;animation-duration:15s;animation-timing-function:linear;animation-iteration-count:infinite}
+.photo-2{z-index:2;object-position:center center;animation-name:photo-2}
+.frame3-fill{position:absolute;top:0;left:0;width:320px;height:60px;z-index:3;opacity:0;will-change:opacity;animation:frame3-fill 15s linear infinite;background:radial-gradient(ellipse at center,rgba(255,255,255,.26) 0%,rgba(255,255,255,.16) 18%,rgba(255,255,255,.08) 34%,rgba(255,255,255,0) 62%),linear-gradient(180deg,#205395 0%,#1877AF 52%,#1D5D9B 100%)}
+.headline{position:absolute;top:2px;z-index:7;height:60px;display:flex;align-items:center;color:#fff;font-family:"Fontfabric-Nexa-Bold",sans-serif;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.52);opacity:0;will-change:opacity,transform}
+.headline-2{left:64px;width:143px;justify-content:flex-start;padding:0;text-align:left;font-size:14px;animation:headline-2 15s linear infinite}
+.headline-2 span{display:inline-block;width:100%;text-align:left;line-height:.92}
+
+@keyframes frame1-window{0%,29%{opacity:1}35%,92.99%{opacity:0}100%{opacity:1}}
+@keyframes frame1-left{0%,2%{opacity:0}10%,29%{opacity:1}35%,100%{opacity:0}}
+@keyframes frame1-logo{0%,1%{opacity:0;transform:translate(-50%,-50%) scale(.82);animation-timing-function:cubic-bezier(.16,1,.3,1)}5%,29%{opacity:1;transform:translate(-50%,-50%) scale(1)}35%,100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+@keyframes frame1-right{0%,3%{opacity:0}8%,29%{opacity:1}35%,100%{opacity:0}}
+@keyframes photo-2{0%,30%{opacity:0;transform:scale(1.018)}35%{opacity:1;transform:scale(1)}64%{opacity:1}69%,100%{opacity:0}}
+@keyframes frame3-fill{0%,63%{opacity:0}68%{opacity:1}92.99%{opacity:1}100%{opacity:0}}
+@keyframes carry-disclaimer{0%,66%{opacity:0}72%,92.99%{opacity:1}100%{opacity:0}}
+@keyframes headline-2{0%,32%{opacity:0;transform:translateX(-14px);animation-timing-function:cubic-bezier(.16,1,.3,1)}42%{opacity:1;transform:translateX(0)}57%{opacity:1;transform:translateX(0)}61%,100%{opacity:0;transform:translateX(5px)}}
