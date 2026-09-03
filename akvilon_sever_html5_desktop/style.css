@@ -1,0 +1,55 @@
+@font-face{font-family:"Geometria";src:url("fonts/Geometria-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"RobotoCondensedLight";src:url("fonts/roboto-condensed-light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+.click-area{position:relative;width:100%;height:200px;background:#fff;border-top:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;overflow:hidden;cursor:pointer}
+.banner{position:absolute;left:50%;top:50%;width:1200px;height:200px;transform:translate(-50%,-50%);overflow:hidden;background:#fff}
+.logo{position:absolute;z-index:20;left:0;top:calc(50% - 20px);width:auto;height:130px;max-width:250px;transform:translateY(-50%);object-fit:contain}
+.photo{position:absolute;z-index:1;right:0;top:0;width:450px;height:200px;object-fit:cover;object-position:center}
+.frame{position:absolute;z-index:10;inset:0;opacity:0;pointer-events:none}
+.headline{position:absolute;left:290px;top:50%;transform:translateY(-50%);font-family:"Geometria",sans-serif;line-height:1.04;font-weight:700}
+.headline .line{display:block;white-space:nowrap}
+.h1{color:#4e4e55;font-size:45px;text-transform:none}
+.h2{left:270px;color:#54A334;font-size:41px;line-height:1.04}
+.green{color:#54A334}
+.gray{color:#4e4e55}
+.mortgage{position:absolute;left:270px;top:50%;display:inline-flex;flex-direction:column;padding:12px 20px 13px;background:#54a334;color:#fff;font-family:"Geometria",sans-serif;font-size:34px;line-height:1.05;font-weight:700;transform:translateY(-50%)}
+.mort-line{display:block;opacity:0}
+.risk-strip{position:absolute;z-index:2;left:0;bottom:0;width:1200px;height:24px;background:rgba(255,255,255,.86)}
+.risk{position:absolute;z-index:3;left:0;bottom:0;width:1200px;height:24px;display:flex;align-items:center;justify-content:flex-start;padding:0;background:transparent;font-family:"RobotoCondensedLight",sans-serif;font-size:20px;line-height:24px;letter-spacing:15.91px;white-space:nowrap;text-align:left;color:#6b6b6b;text-transform:uppercase;overflow:hidden}
+.contacts{position:absolute;left:310px;top:50%;transform:translateY(-58%);font-family:"Geometria",sans-serif}
+.phone{font-size:26px;line-height:31px;color:#4e4e55;opacity:0}
+.site{display:inline-block;margin-top:12px;padding:7px 12px 6px;background:#54a334;color:#fff;font-size:26px;line-height:30px;opacity:0}
+.disclaimer{position:absolute;left:0;bottom:8px;width:850px;font-family:"RobotoCondensedLight",sans-serif;font-size:11px;line-height:1.05;color:#666}
+.disc-line{display:block;opacity:1;white-space:nowrap}
+.frame1{animation:f1 21.2832s linear infinite both}
+.frame2{animation:f2 21.2832s linear infinite both}
+.frame3{animation:f3 21.2832s linear infinite both}
+.frame4{animation:f4 21.2832s linear infinite both}
+.frame1 .l1{animation:rise1 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.frame1 .l2{animation:rise2 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.frame2 .l1{animation:rise21 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.frame2 .l2{animation:rise22 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.mortgage{animation:mortBlock 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.mort-line1{animation:mortLineSync 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.mort-line2{animation:mortLineSync 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.risk-strip{animation:riskStripFade 21.2832s ease infinite both}
+.risk{animation:riskFade 21.2832s ease infinite both}
+.phone{animation:phoneIn 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.site{animation:siteIn 21.2832s cubic-bezier(.34,1.56,.64,1) infinite both}
+.disclaimer{animation:discFade 21.2832s ease infinite both}
+@keyframes f1{0%,0.2819%{opacity:0}0.8457%,20.7732%{opacity:1}23.5923%,100%{opacity:0}}
+@keyframes f2{0%,22.1828%{opacity:0}22.7466%,44.3655%{opacity:1}47.1846%,100%{opacity:0}}
+@keyframes f3{0%,45.7751%{opacity:0}46.3389%,67.9578%{opacity:1}70.7770%,100%{opacity:0}}
+@keyframes f4{0%,69.3674%{opacity:0}69.9312%,97.1809%{opacity:1}100%{opacity:0}}
+@keyframes rise1{0%,1.3156%{opacity:0;transform:translateY(14px)}4.1347%,20.7732%{opacity:1;transform:translateY(0)}23.5923%,100%{opacity:0;transform:translateY(0)}}
+@keyframes rise2{0%,2.2553%{opacity:0;transform:translateY(14px)}5.0744%,20.7732%{opacity:1;transform:translateY(0)}23.5923%,100%{opacity:0;transform:translateY(0)}}
+@keyframes rise21{0%,22.1828%{opacity:0;transform:translateY(14px)}25.0019%,44.3655%{opacity:1;transform:translateY(0)}47.1846%,100%{opacity:0;transform:translateY(0)}}
+@keyframes rise22{0%,23.1225%{opacity:0;transform:translateY(14px)}25.9416%,44.3655%{opacity:1;transform:translateY(0)}47.1846%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mortBlock{0%,45.7751%{opacity:0;transform:translateY(-50%)}47.8894%,67.9578%{opacity:1;transform:translateY(-50%)}70.7770%,100%{opacity:0;transform:translateY(-50%)}}
+@keyframes mortLineSync{0%,45.7751%{opacity:0;transform:translateY(14px)}48.5942%,67.9578%{opacity:1;transform:translateY(0)}70.7770%,100%{opacity:0;transform:translateY(0)}}
+@keyframes riskStripFade{0%,45.7751%{opacity:0}48.5942%,67.9578%{opacity:1}70.7770%,100%{opacity:0}}
+@keyframes riskFade{0%,45.7751%{opacity:0}48.5942%,67.9578%{opacity:1}70.7770%,100%{opacity:0}}
+@keyframes phoneIn{0%,69.3674%{opacity:0;transform:translateY(14px)}72.1865%,97.1809%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@keyframes siteIn{0%,70.0722%{opacity:0;transform:translateY(14px)}72.8913%,97.1809%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@keyframes discFade{0%,69.3674%{opacity:0}72.1865%,97.1809%{opacity:1}100%{opacity:0}}
