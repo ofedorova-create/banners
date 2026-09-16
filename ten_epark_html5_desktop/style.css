@@ -1,0 +1,28 @@
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:100%}body{overflow:hidden}
+.click-area{position:relative;width:100%;height:200px;background:linear-gradient(to bottom,#fff 0%,#ffee40 100%);cursor:pointer;overflow:hidden}
+.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;font-family:"DINProCondensed",sans-serif;color:#000}
+.photo{opacity:0;animation:baseFade 10s infinite}.logo{opacity:0;animation:showLogo 10s infinite}.contact-row{opacity:0;animation:showContact 10s infinite}.disclaimer{opacity:0;animation:showDisclaimer 10s infinite}
+.logo{position:absolute;left:24px;bottom:0;width:50px;height:50px;object-fit:contain}
+.contact-row{position:absolute;left:114px;top:161px;display:flex;align-items:center;gap:40px;white-space:nowrap}
+.site{font-size:28px;line-height:1;font-weight:500;white-space:nowrap}.phone{font-size:28px;line-height:1;font-weight:500;white-space:nowrap}
+.disclaimer{position:absolute;left:114px;top:162px;width:825px;font-size:12px;line-height:1.08;font-weight:500;text-transform:uppercase;text-align:left}
+.photo{position:absolute;right:0;bottom:-10px;width:506px;height:auto;object-fit:contain;object-position:right bottom;transform:none;transform-origin:right bottom}
+.frame{position:absolute;inset:0}.headline{position:absolute;left:24px;top:18px;width:850px;text-transform:uppercase;color:#000}
+.frame-1{opacity:0;animation:showFrame1 10s infinite}.frame-2{opacity:0;animation:showFrame2 10s infinite}
+.frame1-headline{top:8px}.frame1-headline .line-1{display:flex;align-items:flex-end;gap:18px;white-space:nowrap;opacity:0;animation:showFrame1Line1 10s infinite}
+.num500{font-size:98px;line-height:.82;font-weight:700;letter-spacing:-2.2px}.line1-text{font-size:53px;line-height:1;font-weight:700;letter-spacing:-.5px}
+.frame1-headline .line-2{margin-top:6px;font-size:40px;line-height:1;font-weight:700;letter-spacing:-.4px;opacity:0;animation:showFrame1Line2 10s infinite}
+.frame2-headline{top:0;height:200px}.frame2-copy{position:absolute;left:0;top:33px;display:flex;flex-direction:column;gap:4px}.frame2-line1{position:relative;left:0;top:0;font-size:42px;line-height:1;font-weight:700;letter-spacing:-.4px;text-align:left}.frame2-line2{white-space:nowrap}
+.frame2-line2-wrap{position:absolute;right:218px;left:auto;top:calc(50% - 30px);width:auto;display:flex;justify-content:flex-end;transform:translateY(-50%)}
+.discount-group{position:relative;display:inline-block;padding-top:0}.discount-do{position:absolute;left:3px;bottom:calc(100% - 35px);font-size:27px;line-height:1;font-weight:700}
+.discount-main{display:block;font-size:115px;line-height:.68;font-weight:700;letter-spacing:-4px}
+@keyframes baseFade{0%,4%{opacity:0}10%,92%{opacity:1}100%{opacity:0}}
+@keyframes showLogo{0%,16%{opacity:0}20%,92%{opacity:1}100%{opacity:0}}
+@keyframes showContact{0%,16%{opacity:0}20%,42%{opacity:1}47%,100%{opacity:0}}
+@keyframes showDisclaimer{0%,48%{opacity:0}56%,90%{opacity:1}100%{opacity:0}}
+@keyframes showFrame1{0%,4%{opacity:0}10%,42%{opacity:1}47%,100%{opacity:0}}
+@keyframes showFrame1Line1{0%,9%{opacity:0;transform:translateY(12px)}13%,42%{opacity:1;transform:translateY(0)}47%,100%{opacity:0;transform:translateY(0)}}
+@keyframes showFrame1Line2{0%,16%{opacity:0;transform:translateY(12px)}20%,42%{opacity:1;transform:translateY(0)}47%,100%{opacity:0;transform:translateY(0)}}
+@keyframes showFrame2{0%,48%{opacity:0;transform:translateY(12px)}56%,90%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
