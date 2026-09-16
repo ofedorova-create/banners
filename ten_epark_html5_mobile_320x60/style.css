@@ -1,0 +1,46 @@
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:60px;overflow:hidden;background:transparent}
+body{font-family:"DINProCondensed",Arial,sans-serif}
+.click-area{position:relative;width:100%;height:60px;overflow:hidden;cursor:pointer;background:linear-gradient(to bottom,#fff 0%,#ffee40 100%)}
+.banner{position:relative;width:320px;height:60px;margin:0 auto;overflow:hidden;color:#000;background:linear-gradient(to bottom,#fff 0%,#ffee40 100%)}
+.frame{position:absolute;inset:0;opacity:0;pointer-events:none}
+.frame-1{animation:frame1 12s infinite}
+.frame-2{animation:frame2 12s infinite}
+.frame-3{animation:frame3 12s infinite}
+
+.logo{position:absolute;object-fit:contain;z-index:10}
+.logo-persistent{right:3px;top:0;width:24px;height:22px}
+
+.hero-photo{position:absolute;right:15px;bottom:0;width:100px;height:auto;max-width:none;z-index:2;animation:photoTimeline 12s infinite}
+
+.frame1-title{position:absolute;left:5px;top:20px;width:205px;font-size:15px;line-height:.9;font-weight:700;letter-spacing:-.18px;text-transform:uppercase;z-index:5}
+.frame1-title>div{opacity:0;transform:translateY(12px)}
+.frame1-line1{white-space:nowrap;font-size:18px;line-height:.88}
+.frame1-title > div:last-child{font-size:14px;line-height:.92}
+.num500{font-size:23px;line-height:1;display:inline-block;margin-right:2px}
+.frame-1 .frame1-title>div:first-child{animation:line1 12s infinite}
+.frame-1 .frame1-title>div:last-child{animation:line2 12s infinite}
+
+.frame2-title{position:absolute;left:5px;top:20px;width:130px;font-size:14px;line-height:1;font-weight:700;letter-spacing:-.18px;text-transform:uppercase;z-index:5}
+.frame2-line{opacity:0;transform:translateY(12px);white-space:nowrap}
+.frame2-line1{animation:frame2line1 12s infinite;margin-top:3px}
+.frame2-line2{animation:frame2line2 12s infinite;margin-top:1px;font-size:14px;letter-spacing:-.25px}
+
+.discount-row{position:absolute;left:108px;top:21px;width:120px;height:32px;white-space:nowrap;opacity:0;animation:frame2discount 12s infinite;z-index:5;font-weight:700;font-family:"DINProCondensed",Arial,sans-serif}
+.discount-value{position:absolute;left:50%;top:0;transform:translateX(-50%);display:block;font-size:38px;line-height:32px;letter-spacing:-1.4px;font-weight:700}
+.discount-to{position:absolute;left:50%;top:5px;transform:translateX(-32px);display:block;font-size:10px;line-height:10px;font-weight:700}
+
+.disclaimer{position:absolute;left:5px;right:31px;top:28px;height:50px;overflow:hidden;font-size:10px;line-height:.9;font-weight:500;letter-spacing:-.28px;text-transform:uppercase;text-align:left;z-index:4}
+
+@keyframes frame1{0%,3%{opacity:0}7%,28%{opacity:1}32%,100%{opacity:0}}
+@keyframes frame2{0%,31%{opacity:0}35%,60%{opacity:1}64%,100%{opacity:0}}
+@keyframes frame3{0%,63%{opacity:0}67%,96%{opacity:1}100%{opacity:0}}
+@keyframes line1{0%,3%{opacity:0;transform:translateY(12px)}7%,28%{opacity:1;transform:translateY(0)}32%,100%{opacity:0;transform:translateY(0)}}
+@keyframes line2{0%,5%{opacity:0;transform:translateY(12px)}9%,28%{opacity:1;transform:translateY(0)}32%,100%{opacity:0;transform:translateY(0)}}
+@keyframes secondLine2{0%,34%{opacity:0}38%,60%{opacity:1}64%,100%{opacity:0}}
+@keyframes photoTimeline{0%,4%{opacity:0}8%,60%{opacity:1}68%,80%{opacity:0}100%{opacity:0}}
+@keyframes frame2line1{0%,31%{opacity:0;transform:translateY(12px)}35%,60%{opacity:1;transform:translateY(0)}64%,100%{opacity:0;transform:translateY(0)}}
+@keyframes frame2line2{0%,34%{opacity:0;transform:translateY(12px)}38%,60%{opacity:1;transform:translateY(0)}64%,100%{opacity:0;transform:translateY(0)}}
+@keyframes frame2discount{0%,38%{opacity:0}42%,60%{opacity:1}64%,100%{opacity:0}}
