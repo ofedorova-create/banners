@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "Benzin-Regular";
+  src: url("fonts/Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Benzin-Semibold";
+  src: url("fonts/Benzin-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Din Text Cond Pro";
+  src: url("fonts/PFDinTextCondPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --banner-width: 320px;
+  --banner-height: 60px;
+  --banner-bg: #8e8480;
+  --text-color: #ffffff;
+  --cycle-duration: 12s;
+  --side-offset: 25px;
+  --text-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { min-width: var(--banner-width); }
+
+.click-area {
+  position: relative;
+  width: 100%;
+  height: var(--banner-height);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--banner-bg);
+  border-top: 1px solid var(--banner-bg);
+  border-bottom: 1px solid var(--banner-bg);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.banner {
+  position: relative;
+  width: var(--banner-width);
+  height: var(--banner-height);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--banner-bg);
+  color: var(--text-color);
+  font-family: "Benzin-Regular", Arial, sans-serif;
+}
+
+/* Новое фото. В начале удерживается низ изображения. С появлением второго
+   кадра фото начинает плавно двигаться вверх и к третьему кадру приходит
+   к верхнему краю, одновременно увеличиваясь на 10%. */
+.background-photo {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 0;
+  width: 320px;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  opacity: 0;
+  transform-origin: 50% 0;
+  transform: translate(-50%, -21.5px) scale(1);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: backgroundMotion var(--cycle-duration) linear infinite;
+}
+
+.background-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgba(46, 35, 31, 0.10);
+  pointer-events: none;
+  opacity: 0;
+  animation: shadeVisibility var(--cycle-duration) linear infinite;
+}
+
+.frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.frame-title {
+  position: absolute;
+  left: var(--side-offset);
+  font-family: "Benzin-Regular", Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.title-line {
+  display: block;
+  opacity: 0;
+  transform: translateX(12px);
+  filter: blur(1px);
+}
+.title-line--semibold {
+  font-family: "Benzin-Semibold", "Benzin-Regular", Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Кадр 1 */
+.frame-1__title {
+  top: 18px;
+}
+
+.frame-1__title .title-line:nth-child(1) { animation: frame1Line1 var(--cycle-duration) linear infinite; }
+.frame-1__title .title-line:nth-child(2) { animation: frame1Line2 var(--cycle-duration) linear infinite; }
+.frame-1__title .title-line:nth-child(3) { animation: frame1Line3 var(--cycle-duration) linear infinite; }
+
+/* Верхняя видимая граница логотипа совмещена с верхней границей текста. */
+.frame-1__logo {
+  position: absolute;
+  right: var(--side-offset);
+  top: 18px;
+  width: 68px;
+  height: auto;
+  object-fit: contain;
+  object-position: right top;
+  opacity: 0;
+  animation: frame1Logo var(--cycle-duration) linear infinite;
+}
+
+/* Кадр 2: только текст, без логотипа ЖК. */
+.frame-2__title {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.frame-2__title .title-line:nth-child(1) { animation: frame2Line1 var(--cycle-duration) linear infinite; }
+.frame-2__title .title-line:nth-child(2) { animation: frame2Line2 var(--cycle-duration) linear infinite; }
+
+/* Кадр 3 — содержимое исходного второго кадра. */
+.frame-3__logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  width: 78px;
+  height: 10px;
+  object-fit: contain;
+  object-position: center center;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: frame3Elements var(--cycle-duration) linear infinite;
+}
+
+.frame-3__phone {
+  position: absolute;
+  right: var(--side-offset);
+  top: 20px;
+  font-family: "Benzin-Regular", Arial, sans-serif;
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: right;
+  white-space: nowrap;
+  opacity: 0;
+  animation: frame3Elements var(--cycle-duration) linear infinite;
+}
+
+.frame-3__phone span { display: inline; }
+
+.frame-3__legal {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  width: calc(100% - (var(--side-offset) * 2));
+  transform: translate(-50%, -50%);
+  font-family: "PF Din Text Cond Pro", Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  opacity: 0;
+  animation: frame3Elements var(--cycle-duration) linear infinite;
+}
+
+.frame-3__legal span {
+  display: block;
+}
+
+@keyframes backgroundMotion {
+  0% {
+    transform: translate(-50%, -21.5px) scale(1);
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+    transform: translate(-50%, -21.5px) scale(1);
+  }
+  35% {
+    transform: translate(-50%, -21.5px) scale(1);
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+  67% {
+    transform: translate(-50%, 0) scale(1.1);
+    opacity: 1;
+  }
+  96% {
+    transform: translate(-50%, 0) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes shadeVisibility {
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  96% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes frame1Line1 {
+  0%, 3% { opacity: 0; transform: translateX(12px); filter: blur(1px); }
+  8%, 29% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  33%, 100% { opacity: 0; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes frame1Line2 {
+  0%, 4.667% { opacity: 0; transform: translateX(12px); filter: blur(1px); }
+  9.667%, 29% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  33%, 100% { opacity: 0; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes frame1Line3 {
+  0%, 6.334% { opacity: 0; transform: translateX(12px); filter: blur(1px); }
+  11.334%, 29% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  33%, 100% { opacity: 0; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes frame1Logo {
+  0%, 3% { opacity: 0; }
+  8%, 29% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
+@keyframes frame2Line1 {
+  0%, 33% { opacity: 0; transform: translateX(12px); filter: blur(1px); }
+  38%, 62% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  67%, 100% { opacity: 0; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes frame2Line2 {
+  0%, 34.667% { opacity: 0; transform: translateX(12px); filter: blur(1px); }
+  39.667%, 62% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  67%, 100% { opacity: 0; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes frame3Elements {
+  0%, 67% { opacity: 0; }
+  72%, 94% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-photo,
+  .background-shade,
+  .frame-1__title .title-line,
+  .frame-1__logo,
+  .frame-2__title .title-line,
+  .frame-3__logo,
+  .frame-3__phone,
+  .frame-3__legal {
+    animation-play-state: paused;
+  }
+}
+
+.frame-3__legal span { display: block; }
