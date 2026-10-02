@@ -1,0 +1,40 @@
+@font-face{font-family:"Geometria";src:url("fonts/Geometria-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"RobotoCondensedLight";src:url("fonts/roboto-condensed-light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:60px;overflow:hidden}
+.click-area{position:relative;width:100%;height:60px;overflow:hidden;cursor:pointer;background:#fff}
+.banner{position:absolute;left:50%;top:50%;width:320px;height:60px;transform:translate(-50%,-50%);overflow:hidden;background:#fff;font-family:Arial,sans-serif}
+.photo{position:absolute;left:0;top:0;width:90px;height:60px;object-fit:cover;object-position:center;z-index:1;opacity:0;animation:photoFade 11.1s linear infinite both}
+.logo{position:absolute;right:10px;top:50%;width:72px;height:auto;transform:translateY(-50%);z-index:9;opacity:0;animation:logoFrames 11.1s ease-in-out infinite both}
+.frame{position:absolute;inset:0;z-index:5;opacity:0;pointer-events:none}
+.headline{position:absolute;left:102px;right:82px;top:50%;transform:translateY(-50%);font-family:"Geometria",sans-serif;font-weight:700;line-height:1.02;text-align:left}
+.headline .line{display:block;white-space:nowrap;opacity:0}
+.headline-1{font-size:17px;font-weight:700;color:#4E4E55}
+.headline-1 .l2{font-size:14px;color:#54A334;margin-top:1px}
+.headline-2{font-size:14px;font-weight:700;color:#4E4E55}
+.headline-2 .l2{font-size:14px;margin-top:1px}
+.green{color:#54A334}
+.gray{color:#4E4E55}
+.disclaimer-panel{position:absolute;left:5px;right:5px;top:0;bottom:0;z-index:7;overflow:hidden}
+.disclaimer{position:absolute;left:0;right:0;top:18px;width:100%;font-family:"RobotoCondensedLight","Arial Narrow",Arial,sans-serif;font-size:9px;line-height:8.4px;color:#666;letter-spacing:-.25px;text-align:left;white-space:normal;word-break:normal;overflow-wrap:normal;hyphens:none;opacity:0}
+.nowrap{white-space:nowrap}
+.frame1{animation:frame1 11.1s linear infinite both}
+.frame2{animation:frame2 11.1s linear infinite both}
+.frame3{animation:frame3 11.1s linear infinite both}
+.frame1 .l1{animation:line1a 11.1s cubic-bezier(.175,.885,.32,1.275) infinite both}
+.frame1 .l2{animation:line1b 11.1s cubic-bezier(.175,.885,.32,1.275) infinite both}
+.frame2 .l1{animation:line2a 11.1s cubic-bezier(.175,.885,.32,1.275) infinite both}
+.frame2 .l2{animation:line2b 11.1s cubic-bezier(.175,.885,.32,1.275) infinite both}
+.disclaimer{animation:discFade 11.1s ease-in-out infinite both}
+@keyframes frame1{0%,2%{opacity:0}3%,32%{opacity:1}35%,100%{opacity:0}}
+@keyframes frame2{0%,35%{opacity:0}36%,65%{opacity:1}68%,100%{opacity:0}}
+@keyframes frame3{0%,68%{opacity:0}69%,98%{opacity:1}100%{opacity:0}}
+@keyframes line1a{0%,3%{opacity:0;transform:translateY(8px)}8%,32%{opacity:1;transform:translateY(0)}35%,100%{opacity:0;transform:translateY(0)}}
+@keyframes line1b{0%,4.2%{opacity:0;transform:translateY(8px)}9.2%,32%{opacity:1;transform:translateY(0)}35%,100%{opacity:0;transform:translateY(0)}}
+@keyframes line2a{0%,36%{opacity:0;transform:translateY(8px)}41%,65%{opacity:1;transform:translateY(0)}68%,100%{opacity:0;transform:translateY(0)}}
+@keyframes line2b{0%,37.2%{opacity:0;transform:translateY(8px)}42.2%,65%{opacity:1;transform:translateY(0)}68%,100%{opacity:0;transform:translateY(0)}}
+@keyframes discFade{0%,69%{opacity:0}73%,98%{opacity:1}100%{opacity:0}}
+
+@keyframes logoFrames{0%,2%{opacity:0}4%,6%{opacity:1}7%,65%{opacity:1}68%,100%{opacity:0}}
+@keyframes photoFade{0%,2%{opacity:0}4%,65%{opacity:1}69%,100%{opacity:0}}
+
