@@ -1,0 +1,30 @@
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINProCondensed";src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:100%}body{overflow:hidden}
+.click-area{position:relative;width:100%;height:200px;background:#ffec01;cursor:pointer;overflow:hidden}
+.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;background:#ffec01;font-family:"DINProCondensed",sans-serif;color:#000}
+.photo{position:absolute;right:0;top:0;height:332px;width:auto;object-fit:contain;object-position:right top;opacity:1}
+.logo{position:absolute;left:24px;bottom:0;width:50px;height:50px;object-fit:contain;opacity:0;animation:showLogo 10s infinite}
+.contact-row{position:absolute;left:114px;top:161px;display:flex;align-items:center;gap:40px;white-space:nowrap;z-index:4;opacity:0;animation:showContact 10s infinite}
+.site{font-size:28px;line-height:1;font-weight:500;white-space:nowrap}.phone{font-size:28px;line-height:1;font-weight:500;white-space:nowrap}
+.disclaimer{position:absolute;left:114px;top:154px;width:650px;font-size:13px;line-height:1.04;font-weight:500;text-transform:uppercase;text-align:left;z-index:3;opacity:0;animation:showDisclaimer 10s infinite}
+.frame{position:absolute;inset:0}.headline{position:absolute;left:24px;text-transform:uppercase;color:#000}
+.frame-1{opacity:1}.frame-2{opacity:0;animation:showFrame2 10s infinite}
+.frame1-headline{top:17px;width:720px}
+.frame1-two-lines{font-size:63px;line-height:.9;font-weight:700;letter-spacing:0.5px;white-space:nowrap}
+.frame1-two-lines div{display:block;opacity:0;transform:translateY(12px)}
+.frame1-two-lines div:first-child{position:relative;top:-3px;animation:showFrame1Line1 10s infinite}
+.frame1-two-lines div:last-child{animation:showFrame1Line2 10s infinite}
+.frame2-headline{top:0;height:200px;width:980px}
+.frame2-single-line{position:absolute;left:0;top:26px;display:flex;align-items:flex-end;gap:4px;white-space:nowrap}
+.frame2-text{font-size:80px;line-height:.9;font-weight:700;letter-spacing:-1.2px;margin-bottom:48px}
+.discount-stack{display:flex;flex-direction:column;align-items:flex-start;margin-left:56px;position:relative;top:-33px}
+.discount-do{font-size:30px;line-height:1;font-weight:700;margin:0 0 -8px 8px;position:relative;top:45px}
+.discount-main{display:flex;align-items:flex-end;line-height:.82;font-weight:700;letter-spacing:-3px}
+.discount-value{display:block;font-size:140px;line-height:.82}.discount-percent{display:block;font-size:100px;line-height:.82;margin-left:2px}
+@keyframes showLogo{0%,13%{opacity:0}15%,92%{opacity:1}100%{opacity:0}}
+@keyframes showContact{0%,13%{opacity:0}15%,42%{opacity:1}47%,100%{opacity:0}}
+@keyframes showDisclaimer{0%,48%{opacity:0}56%,90%{opacity:1}100%{opacity:0}}
+@keyframes showFrame1Line1{0%,9%{opacity:0;transform:translateY(12px)}13%,42%{opacity:1;transform:translateY(0)}47%,100%{opacity:0;transform:translateY(0)}}
+@keyframes showFrame1Line2{0%,11%{opacity:0;transform:translateY(12px)}15%,42%{opacity:1;transform:translateY(0)}47%,100%{opacity:0;transform:translateY(0)}}
+@keyframes showFrame2{0%,48%{opacity:0;transform:translateY(12px)}56%,90%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
