@@ -1,0 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const clickArea = document.querySelector(".click-area");
+  if (!clickArea) return;
+
+  clickArea.addEventListener("mouseup", function (event) {
+    if (event.button !== 0) return;
+    if (typeof window.callClick === "function") {
+      window.callClick();
+    }
+  });
+});
