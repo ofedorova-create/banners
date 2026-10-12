@@ -1,0 +1,273 @@
+:root {
+  --banner-height: 200px;
+  --banner-width: 1200px;
+  --text-width: 452px;
+  --bg: #192821;
+  --text: #f4f0e7;
+  --muted: #e5e1d8;
+  --accent: #d7bc91;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: var(--banner-height);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.click-area {
+  position: relative;
+  width: var(--banner-width);
+  height: var(--banner-height);
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg);
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--banner-width);
+  height: var(--banner-height);
+  transform: translateX(-50%);
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.text-zone {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--text-width);
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  z-index: 2;
+}
+
+.text-zone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(244, 240, 231, 0.17);
+}
+
+.photo-zone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(var(--banner-width) - var(--text-width));
+  height: var(--banner-height);
+  margin: 0;
+  overflow: hidden;
+  background: #d8c7b1;
+  z-index: 1;
+}
+
+.photo-zone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-logo {
+  position: absolute;
+  left: 30px;
+  top: 14px;
+  width: 156px;
+  height: auto;
+}
+
+.offer {
+  position: absolute;
+  left: 28px;
+  top: 61px;
+  display: flex;
+  align-items: center;
+  width: 398px;
+  height: 63px;
+  white-space: nowrap;
+}
+
+.offer-number {
+  display: inline-block;
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 72px;
+  line-height: 0.86;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+
+.offer-copy {
+  display: inline-block;
+  margin-left: 17px;
+  padding-top: 2px;
+  color: var(--text);
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.35px;
+}
+
+.secondary {
+  position: absolute;
+  left: 30px;
+  top: 132px;
+  width: 395px;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: -0.16px;
+  white-space: nowrap;
+}
+
+.phone {
+  position: absolute;
+  left: 30px;
+  top: 153px;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+}
+
+.legal-row {
+  position: absolute;
+  left: 30px;
+  bottom: 2px;
+  width: 395px;
+  height: 20px;
+}
+
+.developer-logo {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 108px;
+  height: auto;
+}
+
+.disclaimer {
+  position: absolute;
+  left: 123px;
+  bottom: 0;
+  width: 272px;
+  color: rgba(244, 240, 231, 0.82);
+  font-size: 8px;
+  line-height: 9.2px;
+  font-weight: 400;
+  letter-spacing: -0.05px;
+}
+
+.animated {
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(0.22, 0.72, 0.22, 1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.project-logo-anim {
+  animation-name: logoSequence;
+}
+
+.number-anim {
+  animation-name: numberSequence;
+}
+
+.copy-anim {
+  animation-name: copySequence;
+}
+
+.secondary-anim {
+  animation-name: secondarySequence;
+}
+
+.phone-anim {
+  animation-name: phoneSequence;
+}
+
+.developer-anim {
+  animation-name: developerSequence;
+}
+
+.disclaimer-anim {
+  animation-name: disclaimerSequence;
+}
+
+@keyframes logoSequence {
+  0%, 1% { opacity: 0; transform: translateY(5px); }
+  6%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(5px); }
+}
+
+@keyframes numberSequence {
+  0%, 4% { opacity: 0; transform: translateY(7px); }
+  9%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(7px); }
+}
+
+@keyframes copySequence {
+  0%, 7% { opacity: 0; transform: translateY(6px); }
+  12%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(6px); }
+}
+
+@keyframes secondarySequence {
+  0%, 10% { opacity: 0; transform: translateY(5px); }
+  15%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(5px); }
+}
+
+@keyframes phoneSequence {
+  0%, 39% { opacity: 0; transform: translateY(5px); }
+  45%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(5px); }
+}
+
+@keyframes developerSequence {
+  0%, 43% { opacity: 0; transform: translateY(4px); }
+  49%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(4px); }
+}
+
+@keyframes disclaimerSequence {
+  0%, 47% { opacity: 0; transform: translateY(2px); }
+  53%, 94% { opacity: 1; transform: translateY(0); }
+  98.5%, 100% { opacity: 0; transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
