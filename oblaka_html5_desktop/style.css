@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "TT Runs DemiBold";
+  src: url("fonts/TT_Runs_DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  overflow: hidden;
+}
+body { font-family: "TT Runs DemiBold", sans-serif; }
+
+.click-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ffffff;
+}
+.click-area::before,
+.click-area::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 100;
+  background: #dedede;
+  pointer-events: none;
+}
+.click-area::before { top: 0; }
+.click-area::after { bottom: 0; }
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1200px;
+  height: 200px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.orange-panel {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 600px;
+  height: 180px;
+  background: #EF8505;
+}
+
+.photo-window {
+  position: absolute;
+  left: 600px;
+  top: 10px;
+  width: 600px;
+  height: 180px;
+  overflow: hidden;
+}
+.photo {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 600px;
+  height: auto;
+  display: block;
+}
+
+.logo-plate {
+  position: absolute;
+  left: 460px;
+  width: 280px;
+  height: 50px;
+  background: #ffffff;
+  z-index: 10;
+}
+.logo-plate-top {
+  top: 0;
+  border-radius: 0 0 15px 15px;
+}
+.logo-plate-bottom {
+  top: 150px;
+  border-radius: 15px 15px 0 0;
+}
+.logo {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  z-index: 11;
+  pointer-events: none;
+}
+.logo-oblaka {
+  left: 502.681px;
+  top: -0.529px;
+  width: 194.639px;
+  height: 56.5px;
+}
+.logo-neometria {
+  left: 490.362px;
+  top: 143.174px;
+  width: 219.275px;
+  height: 63.653px;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.frame-1 { animation-name: frameOne; }
+.frame-2 { animation-name: frameTwo; opacity: 0; }
+
+@keyframes frameOne {
+  0%, 42% { opacity: 1; }
+  45%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes frameTwo {
+  0%, 49% { opacity: 0; }
+  52%, 88% { opacity: 1; }
+  91%, 100% { opacity: 0; }
+}
+
+.headline,
+.subhead,
+.phone,
+.disclaimer,
+.site {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "TT Runs DemiBold", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+.headline {
+  left: 48px;
+  top: 41px;
+  width: 500px;
+  height: 84px;
+  font-size: 42px;
+  line-height: 42px;
+  white-space: pre;
+}
+.subhead {
+  left: 48px;
+  top: 138px;
+  width: 505px;
+  height: 26px;
+  font-size: 17px;
+  line-height: 21px;
+}
+.phone {
+  left: 52px;
+  top: 25px;
+  width: 390px;
+  height: 34px;
+  font-size: 19pt;
+  line-height: 32px;
+}
+.disclaimer {
+  left: 52px;
+  top: 66px;
+  width: 455px;
+  height: 72px;
+  font-size: 9pt;
+  line-height: 14px;
+  white-space: nowrap;
+}
+.site {
+  left: 52px;
+  top: 149px;
+  width: 300px;
+  height: 32px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame { animation: none; }
+  .frame-1 { opacity: 1; }
+  .frame-2 { opacity: 0; }
+}
