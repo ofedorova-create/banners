@@ -1,0 +1,143 @@
+@font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.ttf")}
+@font-face{font-family:"Viaoda Libre";src:url("fonts/font_adb53ede2510.ttf")}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;overflow:hidden}.click-area{height:60px;width:100%;background:#3C2D28;display:flex;justify-content:center;cursor:pointer}.banner{width:320px;height:60px;position:relative;flex:0 0 320px;overflow:hidden;background:#3C2D28}.frame{position:absolute;inset:0;opacity:0;pointer-events:none;animation:fadeCycle 12s linear infinite both}.frame.f1{animation-name:frameOne}.frame.f2{animation-name:frameTwo}.frame.f3{animation-name:frameThree}.layer{position:absolute;white-space:pre-wrap}.layer.img{object-fit:fill;display:block}.frame .enter{animation:in 12s ease-in-out infinite both}.f1 .enter{animation-name:inFirst}.f2 .enter{animation-name:inSecond}.f3 .enter{animation-name:inThird}
+@keyframes frameOne{0%,27%{opacity:1}33%,100%{opacity:0}}@keyframes frameTwo{0%,27%{opacity:0}33%,61%{opacity:1}67%,100%{opacity:0}}@keyframes frameThree{0%,61%{opacity:0}67%,94%{opacity:1}100%{opacity:0}}
+@keyframes inFirst{0%{opacity:0;transform:translateY(4px)}6%,27%{opacity:1;transform:none}33%,100%{opacity:0;transform:none}}@keyframes inSecond{0%,33%{opacity:0;transform:translateY(4px)}39%,61%{opacity:1;transform:none}67%,100%{opacity:0;transform:none}}@keyframes inThird{0%,67%{opacity:0}72%,94%{opacity:1}100%{opacity:0}}
+@font-face{font-family:"Roboto Condensed";src:url("fonts/font_7f109b2b6d72.ttf");font-weight:600 900;font-style:normal} @font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.ttf");font-weight:400;font-style:normal}
+.layer:not(img){white-space:pre !important;overflow:visible}.layer img{display:block}
+
+/* Mobile 12 — motion adapted from approved desktop 11; three frames, 12s */
+.frame.f1{animation:mv12_f1 12s linear infinite both!important}
+.frame.f2{animation:mv12_f2 12s linear infinite both!important}
+.frame.f3{animation:mv12_f3 12s linear infinite both!important;background:#3C2D28}
+@keyframes mv12_f1{0%,29%{opacity:1}35%,100%{opacity:0}}
+@keyframes mv12_f2{0%,29%{opacity:0}35%,63%{opacity:1}69%,100%{opacity:0}}
+@keyframes mv12_f3{0%,63%{opacity:0}69%,94%{opacity:1}100%{opacity:0}}
+/* Shared background visual across ad frames: identical geometry, no translation/scale. */
+#f1_photo,#f2_photo,#f1_fon1,#f2_fon1,#f1_fon2,#f2_fon2,#f1_logo_asset,#f2_logo_asset,#f1_slogan,#f2_slogan{animation:none!important;transform:none!important}
+/* Parking + text, synchronized; next infrastructure + text */
+#f1_icon_park,#f1_text_park{animation:mv12_a1 12s cubic-bezier(.2,.72,.2,1) infinite both!important}
+#f1_icon_infra,#f1_text_infra{animation:mv12_a2 12s cubic-bezier(.2,.72,.2,1) infinite both!important}
+@keyframes mv12_a1{0%,2%{opacity:0;transform:translateX(5px)}8%,29%{opacity:1;transform:translateX(0)}35%,100%{opacity:0;transform:translateX(0)}}
+@keyframes mv12_a2{0%,5%{opacity:0;transform:translateX(5px)}11%,29%{opacity:1;transform:translateX(0)}35%,100%{opacity:0;transform:translateX(0)}}
+/* Park benefit + icon then CTA; flat text, plate mild scale from center. */
+#f2_icon_tree,#f2_text_tree{animation:mv12_benefit 12s cubic-bezier(.2,.72,.2,1) infinite both!important}
+@keyframes mv12_benefit{0%,36%{opacity:0;transform:translateX(5px)}42%,63%{opacity:1;transform:translateX(0)}69%,100%{opacity:0;transform:translateX(0)}}
+#f2_button_shape{animation:mv12_btn 12s cubic-bezier(.2,.78,.2,1) infinite both!important;transform-origin:center center}
+@keyframes mv12_btn{0%,39%{opacity:0;transform:scale(.93)}45%,63%{opacity:1;transform:scale(1)}69%,100%{opacity:0;transform:scale(1)}}
+#f2_button_text{animation:mv12_btntext 12s linear infinite both!important;transform:none!important}
+@keyframes mv12_btntext{0%,39%{opacity:0}45%,63%{opacity:1}69%,100%{opacity:0}}
+/* Legal frame appears as one block without text movement. */
+#f3_legal{animation:mv12_legal 12s linear infinite both!important;transform:none!important}
+@keyframes mv12_legal{0%,63%{opacity:0}69%,94%{opacity:1}100%{opacity:0}}
+.layer:not(img){white-space:pre!important}
+
+/* Mobile 12 QUICK PREVIEW v1.5: stable shared image layers */
+.banner>.shared-art{z-index:1;pointer-events:none;animation:none!important;transform:none!important}
+.banner>.frame{z-index:2}
+.frame.f3{background:#3C2D28!important}
+#f2_button_text{font-family:"Roboto Condensed",sans-serif!important;font-weight:400!important;white-space:nowrap!important;overflow:visible!important}
+
+
+/* Preview v1.6 — stable logo/slogan and improved timing */
+#shared_logo,#shared_slogan{animation:shared_brand 15s linear infinite both!important;opacity:1;transform:none!important;pointer-events:none}
+@keyframes shared_brand{0%,68%{opacity:1}73%,95%{opacity:0}100%{opacity:1}}
+.frame.f1{animation:mobile16_f1 15s linear infinite both!important}
+.frame.f2{animation:mobile16_f2 15s linear infinite both!important}
+.frame.f3{animation:mobile16_f3 15s linear infinite both!important;z-index:5}
+@keyframes mobile16_f1{0%,29%{opacity:1}34%,100%{opacity:0}}
+@keyframes mobile16_f2{0%,37%{opacity:0}43%,67%{opacity:1}72%,100%{opacity:0}}
+@keyframes mobile16_f3{0%,71%{opacity:0}77%,96%{opacity:1}100%{opacity:0}}
+#f1_icon_park,#f1_text_park{animation:mobile16_a1 15s ease-out infinite both!important}
+#f1_icon_infra,#f1_text_infra{animation:mobile16_a2 15s ease-out infinite both!important}
+@keyframes mobile16_a1{0%,2%{opacity:0;transform:translateX(5px)}8%,29%{opacity:1;transform:none}34%,100%{opacity:0;transform:none}}
+@keyframes mobile16_a2{0%,5%{opacity:0;transform:translateX(5px)}11%,29%{opacity:1;transform:none}34%,100%{opacity:0;transform:none}}
+#f2_icon_tree,#f2_text_tree{animation:mobile16_benefit 15s ease-out infinite both!important}
+@keyframes mobile16_benefit{0%,40%{opacity:0;transform:translateX(5px)}47%,67%{opacity:1;transform:none}72%,100%{opacity:0;transform:none}}
+#f2_button_shape{animation:mobile16_btn 15s ease-out infinite both!important}
+@keyframes mobile16_btn{0%,44%{opacity:0;transform:scale(.93)}50%,67%{opacity:1;transform:scale(1)}72%,100%{opacity:0;transform:scale(1)}}
+#f2_button_text{animation:mobile16_btntext 15s linear infinite both!important;transform:none!important}
+@keyframes mobile16_btntext{0%,44%{opacity:0}50%,67%{opacity:1}72%,100%{opacity:0}}
+#f3_legal{animation:mobile16_legal 15s linear infinite both!important;transform:none!important;text-align:center!important}
+@keyframes mobile16_legal{0%,71%{opacity:0}77%,96%{opacity:.5}100%{opacity:0}}
+
+/* v1.8 — clean legal-to-first-frame handoff with a visible pause */
+.frame.f1{animation:mobile18_f1 15s linear infinite both!important}
+@keyframes mobile18_f1{0%,4%{opacity:0}9%,29%{opacity:1}34%,100%{opacity:0}}
+.frame.f3{animation:mobile18_f3 15s linear infinite both!important;z-index:5}
+@keyframes mobile18_f3{0%,71%{opacity:0}77%,89%{opacity:1}93%,100%{opacity:0}}
+#f3_legal{animation:mobile18_legal 15s linear infinite both!important;transform:none!important;text-align:center!important}
+@keyframes mobile18_legal{0%,71%{opacity:0}77%,89%{opacity:.5}93%,100%{opacity:0}}
+#shared_logo,#shared_slogan{animation:mobile18_brand 15s linear infinite both!important;transform:none!important}
+@keyframes mobile18_brand{0%,4%{opacity:0}9%,68%{opacity:1}73%,100%{opacity:0}}
+
+/* QUICK PREVIEW v1.9: shorten only pause between ad frames 1 -> 2 by 0.30s */
+.frame.f2{animation:mobile19_f2 15s linear infinite both!important}
+@keyframes mobile19_f2{0%,35%{opacity:0}41%,67%{opacity:1}72%,100%{opacity:0}}
+#f2_icon_tree,#f2_text_tree{animation:mobile19_benefit 15s ease-out infinite both!important}
+@keyframes mobile19_benefit{0%,38%{opacity:0;transform:translateX(5px)}45%,67%{opacity:1;transform:none}72%,100%{opacity:0;transform:none}}
+#f2_button_shape{animation:mobile19_btn 15s ease-out infinite both!important}
+@keyframes mobile19_btn{0%,42%{opacity:0;transform:scale(.93)}48%,67%{opacity:1;transform:scale(1)}72%,100%{opacity:0;transform:scale(1)}}
+#f2_button_text{animation:mobile19_btntext 15s linear infinite both!important;transform:none!important}
+@keyframes mobile19_btntext{0%,42%{opacity:0}48%,67%{opacity:1}72%,100%{opacity:0}}
+
+
+/* v2.0: synchronized photo, logo, slogan at legal -> frame 1 transition */
+#shared_photo,#shared_logo,#shared_slogan{animation:mobile20_shared 15s linear infinite both!important;transform:none!important}
+@keyframes mobile20_shared{0%,2%{opacity:0}6%,68%{opacity:1}73%,100%{opacity:0}}
+.frame.f1{animation:mobile20_f1 15s linear infinite both!important}
+@keyframes mobile20_f1{0%,2%{opacity:0}6%,29%{opacity:1}34%,100%{opacity:0}}
+/* Faster CTA entry: 0.45 s vs 0.90 s; same start time */
+#f2_button_shape{animation:mobile20_btn 15s ease-out infinite both!important}
+@keyframes mobile20_btn{0%,42%{opacity:0;transform:scale(.93)}45%,67%{opacity:1;transform:scale(1)}72%,100%{opacity:0;transform:scale(1)}}
+#f2_button_text{animation:mobile20_btntext 15s linear infinite both!important;transform:none!important}
+@keyframes mobile20_btntext{0%,42%{opacity:0}45%,67%{opacity:1}72%,100%{opacity:0}}
+
+/* v2.1: remove legacy forced photo opacity and synchronize all shared advertising elements */
+#shared_photo,#shared_logo,#shared_slogan{animation:mobile21_brand_photo 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile21_brand_photo{0%,4%{opacity:0}9%,68%{opacity:1}73%,100%{opacity:0}}
+/* Preserve first-frame fade identical to photo and branding */
+.frame.f1{animation:mobile21_f1 15s linear infinite both!important}
+@keyframes mobile21_f1{0%,4%{opacity:0}9%,29%{opacity:1}34%,100%{opacity:0}}
+/* Background pieces stay stationary through the two advertising frames */
+/* replaced by unified shared-layer timing in v2.2 */
+
+/* v2.2: shorter transition 1->2, full synchronization of fon1/fon2 with photo */
+#shared_photo,#shared_logo,#shared_slogan,#shared_fon1,#shared_fon2{animation:mobile22_shared 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile22_shared{0%,4%{opacity:0}9%,68%{opacity:1}73%,100%{opacity:0}}
+/* First advertising scene unchanged; second begins earlier to reduce blank gap */
+.frame.f2{animation:mobile22_f2 15s linear infinite both!important}
+@keyframes mobile22_f2{0%,32.5%{opacity:0}38.5%,67%{opacity:1}72%,100%{opacity:0}}
+#f2_icon_tree,#f2_text_tree{animation:mobile22_benefit 15s ease-out infinite both!important}
+@keyframes mobile22_benefit{0%,35.5%{opacity:0;transform:translateX(5px)}42.5%,67%{opacity:1;transform:none}72%,100%{opacity:0;transform:none}}
+#f2_button_shape{animation:mobile22_btn 15s ease-out infinite both!important}
+@keyframes mobile22_btn{0%,39.5%{opacity:0;transform:scale(.93)}42.5%,67%{opacity:1;transform:scale(1)}72%,100%{opacity:0;transform:scale(1)}}
+#f2_button_text{animation:mobile22_btntext 15s linear infinite both!important;transform:none!important}
+@keyframes mobile22_btntext{0%,39.5%{opacity:0}42.5%,67%{opacity:1}72%,100%{opacity:0}}
+
+/* v2.3: fon1 begins 0.25s before photo (0.35s versus 0.60s) and fades in faster (0.40s versus 0.75s) */
+#shared_fon1{animation:mobile23_fon1 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile23_fon1{0%,2.3333%{opacity:0}5%,73%{opacity:1}76%,100%{opacity:0}}
+
+/* v2.5: shorten only the 3->1 interval; legal fade and other transitions unchanged. */
+#shared_photo,#shared_logo,#shared_slogan,#shared_fon2{animation:mobile25_shared 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile25_shared{0%,2%{opacity:0}7%{opacity:1}68%{opacity:1}73%,100%{opacity:0}}
+.frame.f1{animation:mobile25_f1 15s linear infinite both!important}
+@keyframes mobile25_f1{0%,2%{opacity:0}7%,29%{opacity:1}34%,100%{opacity:0}}
+/* Fon1 retains its 0.25s earlier start and 0.40s fade-in relative to the other shared layers. */
+#shared_fon1{animation:mobile25_fon1 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile25_fon1{0%,0.3333%{opacity:0}3%{opacity:1}73%{opacity:1}76%,100%{opacity:0}}
+
+
+/* v2.6: legal fully fades at 14.75s, shared photo/brand and first ad begin at 15.00s: 0.25s gap across loop boundary. */
+.frame.f3{animation:mobile26_f3 15s linear infinite both!important}
+@keyframes mobile26_f3{0%,71%{opacity:0}77%,94.3333%{opacity:1}98.3333%,100%{opacity:0}}
+#f3_legal{animation:mobile26_legal 15s linear infinite both!important;transform:none!important;text-align:center!important}
+@keyframes mobile26_legal{0%,71%{opacity:0}77%,94.3333%{opacity:.5}98.3333%,100%{opacity:0}}
+#shared_photo,#shared_logo,#shared_slogan,#shared_fon2{animation:mobile26_shared 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile26_shared{0%{opacity:0}5%{opacity:1}68%{opacity:1}73%,100%{opacity:0}}
+.frame.f1{animation:mobile26_f1 15s linear infinite both!important}
+@keyframes mobile26_f1{0%{opacity:0}5%,29%{opacity:1}34%,100%{opacity:0}}
+/* fon1 begins 0.25s before the photo (across loop boundary), fade duration 0.40s */
+#shared_fon1{animation:mobile26_fon1 15s linear infinite both!important;transform:none!important;pointer-events:none}
+@keyframes mobile26_fon1{0%{opacity:.625}1%{opacity:1}73%{opacity:1}76%,98.3333%{opacity:0}100%{opacity:.625}}
