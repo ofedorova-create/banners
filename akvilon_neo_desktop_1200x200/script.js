@@ -1,0 +1,1 @@
+(function(){"use strict";var a=document.querySelector(".click-area");if(a){a.addEventListener("click",function(event){if ("button" in event && event.button !== 0) return;if(typeof window.callClick==="function"){window.callClick();}});}})();
