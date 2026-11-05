@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const area=document.querySelector(".click-area");if(!area)return;area.addEventListener("click",function(event){if("button" in event && event.button !== 0)return;if(typeof window.callClick === "function")window.callClick();});});
