@@ -1,0 +1,212 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;overflow:hidden}.click-area{width:100%;height:200px;background:#3C2D28;box-shadow:inset 0 1px #D4D4D4,inset 0 -1px #D4D4D4;cursor:pointer;display:flex;justify-content:center;align-items:flex-start}.banner{position:relative;width:1200px;height:200px;flex:0 0 1200px;overflow:hidden}.frame{position:absolute;inset:0;opacity:0;pointer-events:none;animation-duration:10s;animation-iteration-count:infinite;animation-timing-function:linear;animation-fill-mode:both}.frame-1{animation-name:scene1}.frame-2{animation-name:scene2}@keyframes scene1{0%,43%{opacity:1}50%,94%{opacity:0}100%{opacity:1}}@keyframes scene2{0%,43%{opacity:0}50%,94%{opacity:1}100%{opacity:0}}.layer{position:absolute;white-space:pre;overflow:visible}.layer-img{display:block;object-fit:fill}.frame-1 .headline{animation:entrance1 10s ease-out infinite both}.frame-2 .headline{animation:entrance2 10s ease-out infinite both}@keyframes entrance1{0%{opacity:0}3%,43%{opacity:1}50%,100%{opacity:0}}@keyframes entrance2{0%,47%{opacity:0}53%,95%{opacity:1}100%{opacity:0}}
+@font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Viaoda Libre";src:url("fonts/viaoda-libre.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Roboto Condensed";src:url("fonts/roboto-condensed.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";src:url("fonts/inter.ttf") format("truetype");font-display:block}
+@keyframes my_in_1_0{0%,1.50%{opacity:0}7.00%,100%{opacity:0.55}}@keyframes my_in_1_1{0%,3.50%{opacity:0}9.00%,100%{opacity:0.55}}@keyframes my_in_1_2{0%,5.50%{opacity:0}11.00%,100%{opacity:1.0}}@keyframes my_in_1_3{0%,7.50%{opacity:0}13.00%,100%{opacity:1.0}}@keyframes my_in_1_4{0%,9.50%{opacity:0}15.00%,100%{opacity:1.0}}@keyframes my_in_1_5{0%,11.50%{opacity:0}17.00%,100%{opacity:1.0}}@keyframes my_in_1_6{0%,13.50%{opacity:0}19.00%,100%{opacity:0.8}}@keyframes my_in_1_7{0%,15.50%{opacity:0}21.00%,100%{opacity:1.0}}@keyframes my_in_1_8{0%,17.50%{opacity:0}23.00%,100%{opacity:1.0}}@keyframes my_in_2_0{0%,50.50%{opacity:0}56.00%,100%{opacity:1.0}}@keyframes my_in_2_1{0%,52.50%{opacity:0}58.00%,100%{opacity:1.0}}@keyframes my_in_2_2{0%,54.50%{opacity:0}60.00%,100%{opacity:1.0}}@keyframes my_in_2_3{0%,56.50%{opacity:0}62.00%,100%{opacity:1.0}}@keyframes my_in_2_4{0%,58.50%{opacity:0}64.00%,100%{opacity:1.0}}
+
+/* DEV QUICK PREVIEW v1.4: restored working v1.2 layout, synchronized motion */
+@keyframes v14_f1_0{0%,1.5%{opacity:0;transform:translateY(7px)}7%,43%{opacity:0.55;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_1{0%,3.5%{opacity:0;transform:translateY(7px)}9%,43%{opacity:0.55;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_2{0%,5.5%{opacity:0;transform:translateY(7px)}11%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_3{0%,7.5%{opacity:0;transform:translateY(7px)}13%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_4{0%,9.5%{opacity:0;transform:translateY(7px)}15%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_5{0%,11.5%{opacity:0;transform:translateY(7px)}17%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_6{0%,17.5%{opacity:0;transform:translateY(7px)}23%,43%{opacity:0.8;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_7{0%,19.5%{opacity:0;transform:translateY(7px)}25%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f1_8{0%,21.5%{opacity:0;transform:translateY(7px)}27%,43%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f2_0{0%,50.5%{opacity:0;transform:translateY(7px)}56%,94%{opacity:1;transform:translateY(0)}100%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f2_1{0%,52.5%{opacity:0;transform:translateY(7px)}58%,94%{opacity:1;transform:translateY(0)}100%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f2_2{0%,54.5%{opacity:0;transform:translateY(7px)}60%,94%{opacity:1;transform:translateY(0)}100%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f2_3{0%,57%{opacity:0;transform:translateY(7px)}62.5%,94%{opacity:1;transform:translateY(0)}100%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_f2_4{0%,61%{opacity:0;transform:translateY(7px)}66.5%,94%{opacity:1;transform:translateY(0)}100%,100%{opacity:0;transform:translateY(0)}}
+@keyframes v14_fon1_first{0%,43%{transform:translateX(0)}50%,94%{transform:translateX(60px)}100%{transform:translateX(0)}}
+@keyframes v14_fon1_second{0%,43%{transform:translateX(-60px)}50%,94%{transform:translateX(0)}100%{transform:translateX(-60px)}}
+.frame-1 #f1_shape{animation:v14_fon1_first 10s cubic-bezier(.45,0,.2,1) infinite both}
+.frame-2 #f2_shape{animation:v14_fon1_second 10s cubic-bezier(.45,0,.2,1) infinite both}
+@keyframes v14_cta{0%,11.5%{opacity:0;transform:scale(.88)}17%,43%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+.frame-1 #f1_button{transform-origin:center center;animation:v14_cta 10s cubic-bezier(.2,.8,.2,1) infinite both}
+@keyframes v14_icon1{0%,50.5%{opacity:0;transform:translateX(-8px) scale(.94)}56%,94%{opacity:1;transform:translateX(0) scale(1)}100%{opacity:0;transform:translateX(0) scale(1)}}
+#f2_icon_1{animation:v14_icon1 10s cubic-bezier(.2,.8,.2,1) infinite both}
+@keyframes v14_icon2{0%,52.5%{opacity:0;transform:translateX(-8px) scale(.94)}58%,94%{opacity:1;transform:translateX(0) scale(1)}100%{opacity:0;transform:translateX(0) scale(1)}}
+#f2_icon_2{animation:v14_icon2 10s cubic-bezier(.2,.8,.2,1) infinite both}
+@keyframes v14_icon3{0%,54.5%{opacity:0;transform:translateX(-8px) scale(.94)}60%,94%{opacity:1;transform:translateX(0) scale(1)}100%{opacity:0;transform:translateX(0) scale(1)}}
+#f2_icon_3{animation:v14_icon3 10s cubic-bezier(.2,.8,.2,1) infinite both}
+
+
+/* QUICK PREVIEW v1.5: synchronized motion and continuity */
+@keyframes mv_f1shape {0%,40%{transform:translateX(0);opacity:1}44%,49%{transform:translateX(40px);opacity:1}50%,94%{transform:translateX(40px);opacity:0}95%,100%{transform:translateX(0);opacity:1}}
+@keyframes mv_f2shape {0%,43%{transform:translateX(-40px);opacity:0}50%,92%{transform:translateX(0);opacity:1}94%,100%{transform:translateX(-40px);opacity:0}}
+@keyframes mv_button {0%,10%{opacity:0;transform:scale(.92)}16%,42%{opacity:1;transform:scale(1)}48%,100%{opacity:0;transform:scale(1)}}
+@keyframes mv_buttontext {0%,10%{opacity:0;transform:translateY(0)}16%,42%{opacity:1;transform:translateY(0)}48%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_firstlegal {0%,6%{opacity:0;transform:translateY(0)}12%,42%{opacity:1;transform:translateY(0)}48%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_warning {0%,6%{opacity:0;transform:translateY(0)}12%,42%{opacity:.8;transform:translateY(0)}48%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_secondlegal {0%,52%{opacity:0;transform:translateY(0)}59%,92%{opacity:1;transform:translateY(0)}98%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_pair1 {0%,51%{opacity:0;transform:translateY(6px)}57%,92%{opacity:1;transform:translateY(0)}98%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_pair2 {0%,54%{opacity:0;transform:translateY(6px)}60%,92%{opacity:1;transform:translateY(0)}98%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mv_pair3 {0%,57%{opacity:0;transform:translateY(6px)}63%,92%{opacity:1;transform:translateY(0)}98%,100%{opacity:0;transform:translateY(0)}}
+
+
+/* QUICK PREVIEW v1.6 — synced rate line, smoother frame swaps, icon replacement */
+.frame-1{animation-name:scene1_fix !important}
+.frame-2{animation-name:scene2_fix !important}
+@keyframes scene1_fix{0%,44%{opacity:1}50%,94%{opacity:0}100%{opacity:1}}
+@keyframes scene2_fix{0%,44%{opacity:0}50%,94%{opacity:1}100%{opacity:0}}
+
+/* First-frame main copy timing */
+#f1_rate_label,#f1_rate_from,#f1_rate_num{animation:rate_line_all 10s cubic-bezier(.22,.8,.18,1) infinite both !important}
+@keyframes rate_line_all{0%,6%{opacity:0;transform:translateY(6px)}12%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+
+/* Keep warning and legal lines entering together with the first-frame content */
+#f1_mortgage_warning,#f1_mortgage_legal,#f1_mortgage_legal_2{animation:first_legal_sync 10s linear infinite both !important}
+@keyframes first_legal_sync{0%,7%{opacity:0;transform:translateY(0)}12%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+
+/* CTA text appears without shift; CTA plate keeps subtle center pop */
+#f1_button_copy{animation:cta_text_plain 10s linear infinite both !important}
+@keyframes cta_text_plain{0%,6%{opacity:0}12%,44%{opacity:1}50%,100%{opacity:0}}
+#f1_button{animation:cta_plate_pop 10s cubic-bezier(.2,.75,.2,1) infinite both !important;transform-origin:center center}
+@keyframes cta_plate_pop{0%,6%{opacity:0;transform:scale(.92)}12%,44%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+
+/* Smoother movement of background shape between frame 1 and frame 2 */
+#f1_shape{animation:bg1_soft 10s cubic-bezier(.35,0,.18,1) infinite both !important;transform-origin:center center}
+@keyframes bg1_soft{0%,40%{opacity:1;transform:translateX(0)}44%,50%{opacity:1;transform:translateX(22px)}50%,94%{opacity:1;transform:translateX(22px)}94%,100%{opacity:1;transform:translateX(0)}}
+#f2_shape{animation:bg2_soft 10s cubic-bezier(.35,0,.18,1) infinite both !important;transform-origin:center center}
+@keyframes bg2_soft{0%,44%{opacity:1;transform:translateX(-18px)}50%,94%{opacity:1;transform:translateX(0)}100%{opacity:1;transform:translateX(-18px)}}
+
+/* New second-frame icons + adjacent texts appear together, no exit drift */
+#f2_icon_1,#f2_text_1{animation:pair1_sync 10s cubic-bezier(.2,.8,.2,1) infinite both !important}
+#f2_icon_2,#f2_text_2{animation:pair2_sync 10s cubic-bezier(.2,.8,.2,1) infinite both !important}
+#f2_icon_3,#f2_text_3{animation:pair3_sync 10s cubic-bezier(.2,.8,.2,1) infinite both !important}
+@keyframes pair1_sync{0%,50%{opacity:0;transform:translateX(10px)}56%,94%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(0)}}
+@keyframes pair2_sync{0%,53%{opacity:0;transform:translateX(10px)}59%,94%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(0)}}
+@keyframes pair3_sync{0%,56%{opacity:0;transform:translateX(10px)}62%,94%{opacity:1;transform:translateX(0)}100%{opacity:0;transform:translateX(0)}}
+
+/* Stable second-frame slogan and legal fade without drift */
+#f2_slogan{animation:f2_slogan_fix 10s linear infinite both !important}
+@keyframes f2_slogan_fix{0%,55%{opacity:0}61%,94%{opacity:1}100%{opacity:0}}
+#f2_legal{animation:second_legal_fix 10s linear infinite both !important}
+@keyframes second_legal_fix{0%,55%{opacity:0}61%,94%{opacity:1}100%{opacity:0}}
+
+
+/* QUICK PREVIEW v1.7 — фон1 as one continuous moving layer */
+#shared_bg1{animation:bg1_shared_move 10s cubic-bezier(.35,0,.18,1) infinite both !important;pointer-events:none}
+#f1_shape,#f2_shape{opacity:0 !important;visibility:hidden !important;animation:none !important}
+@keyframes bg1_shared_move{
+  0%,44%{transform:translateX(0);opacity:1}
+  50%,94%{transform:translateX(40px);opacity:1}
+  100%{transform:translateX(0);opacity:1}
+}
+
+
+/* QUICK PREVIEW v1.8: continuous фон1 between photographs and text */
+.banner{isolation:isolate}
+.banner>.shared-photo{z-index:1 !important;animation-duration:10s;animation-timing-function:linear;animation-iteration-count:infinite;animation-fill-mode:both;pointer-events:none}
+.banner>.shared-photo-1{animation-name:scene1_fix}
+.banner>.shared-photo-2{animation-name:scene2_fix}
+.banner>#shared_bg1{z-index:2 !important;opacity:1 !important}
+.banner>.frame{z-index:3 !important}
+/* The frame content has no duplicate photo or фон1; both remain beneath its text */
+
+/* QUICK PREVIEW v2.0: moderate pause for frame 2 -> frame 1 */
+.frame-1{animation-name:scene1_mid !important}
+@keyframes scene1_mid{0%,44%{opacity:1}50%,94%{opacity:0}99%,100%{opacity:1}}
+#f1_full_cost_label{animation:mid_f1_full_cost_label 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_full_cost_label{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:0.55;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_full_cost_num{animation:mid_f1_full_cost_num 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_full_cost_num{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:0.55;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_rate_label{animation:mid_f1_rate_label 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_rate_label{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_rate_from{animation:mid_f1_rate_from 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_rate_from{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_rate_num{animation:mid_f1_rate_num 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_rate_num{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_button_copy{animation:mid_f1_button_copy 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_button_copy{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_mortgage_warning{animation:mid_f1_mortgage_warning 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_mortgage_warning{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:0.8;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_mortgage_legal{animation:mid_f1_mortgage_legal 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_mortgage_legal{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_mortgage_legal_2{animation:mid_f1_mortgage_legal_2 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_f1_mortgage_legal_2{0%,2.5%{opacity:0;transform:translateY(6px)}8.5%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_button{animation:mid_button 10s cubic-bezier(.2,.75,.2,1) infinite both !important}
+@keyframes mid_button{0%,2.5%{opacity:0;transform:scale(.92)}8.5%,44%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+
+/* v2.1 — first-frame staged copy, 10-second seamless cycle */
+#f1_full_cost_label,#f1_full_cost_num{animation:may21_top 10s linear infinite both !important}
+@keyframes may21_top{0%{opacity:0;transform:none}5%,44%{opacity:1;transform:none}50%,100%{opacity:0;transform:none}}
+#f1_rate_label,#f1_rate_from,#f1_rate_num{animation:may21_rate 10s cubic-bezier(.24,.78,.25,1) infinite both !important}
+@keyframes may21_rate{0%,7%{opacity:0;transform:translateY(14px)}13%,44%{opacity:1;transform:translateY(0)}50%,100%{opacity:0;transform:translateY(0)}}
+#f1_button{animation:may21_btn 10s cubic-bezier(.22,.78,.21,1) infinite both !important;transform-origin:center center}
+@keyframes may21_btn{0%,14%{opacity:0;transform:scale(.93)}20%,44%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+#f1_button_copy{animation:may21_btntext 10s linear infinite both !important;transform:none !important}
+@keyframes may21_btntext{0%,14%{opacity:0}20%,44%{opacity:1}50%,100%{opacity:0}}
+#f1_mortgage_warning,#f1_mortgage_legal,#f1_mortgage_legal_2{animation:may21_legal 10s linear infinite both !important}
+@keyframes may21_legal{0%,14%{opacity:0;transform:none}20%,44%{opacity:1;transform:none}50%,100%{opacity:0;transform:none}}
+
+
+/* QUICK PREVIEW v2.2: rate block enters with upper copy as one coherent unit */
+#f1_rate_label,#f1_rate_from,#f1_rate_num{
+ animation:may22_rate 10s cubic-bezier(.2,.75,.18,1) infinite both !important;
+ transform-origin:50% 60%;
+}
+@keyframes may22_rate{
+ 0%{opacity:0;transform:translateY(7px) scale(.94)}
+ 5%{opacity:1;transform:translateY(-1px) scale(1.025)}
+ 8%{opacity:1;transform:translateY(0) scale(1)}
+ 44%{opacity:1;transform:translateY(0) scale(1)}
+ 50%,100%{opacity:0;transform:translateY(0) scale(1)}
+}
+
+/* QUICK PREVIEW v2.3: shorter gap before CTA, no other timing changes */
+#f1_button{animation:may23_btn 10s cubic-bezier(.22,.78,.21,1) infinite both !important;transform-origin:center center}
+@keyframes may23_btn{0%,11%{opacity:0;transform:scale(.93)}17%,44%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+#f1_button_copy{animation:may23_btntext 10s linear infinite both !important;transform:none !important}
+@keyframes may23_btntext{0%,11%{opacity:0}17%,44%{opacity:1}50%,100%{opacity:0}}
+#f1_mortgage_warning,#f1_mortgage_legal,#f1_mortgage_legal_2{animation:may23_legal 10s linear infinite both !important}
+@keyframes may23_legal{0%,11%{opacity:0;transform:none}17%,44%{opacity:1;transform:none}50%,100%{opacity:0;transform:none}}
+
+/* v2.4: фон2 — fixed, persistent across both frames */
+#shared_bg2{position:absolute!important;left:1068px!important;top:0!important;width:164px!important;height:200px!important;transform:none!important;animation:none!important;opacity:1!important;visibility:visible!important;pointer-events:none!important;z-index:3!important}
+#f1_side,#f2_tree{display:none!important}
+
+/* QUICK PREVIEW v2.5: button and full legal block start at 0.25s after rate block (starts at t=0). */
+#f1_button{animation:may25_button 10s cubic-bezier(.22,.78,.21,1) infinite both !important;transform-origin:center center}
+@keyframes may25_button{0%,2.5%{opacity:0;transform:scale(.93)}8.5%,44%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+#f1_button_copy{animation:may25_button_text 10s linear infinite both !important;transform:none !important}
+@keyframes may25_button_text{0%,2.5%{opacity:0}8.5%,44%{opacity:1}50%,100%{opacity:0}}
+#f1_mortgage_warning,#f1_mortgage_legal,#f1_mortgage_legal_2{animation:may25_legal 10s linear infinite both !important}
+@keyframes may25_legal{0%,2.5%{opacity:0;transform:none}8.5%,44%{opacity:1;transform:none}50%,100%{opacity:0;transform:none}}
+
+/* CURRENT ART v20 geometry only; preserve all original production animations. */
+#f1_photo{left:769px!important;top:-12px!important;width:384px!important;height:214px!important;}
+#f1_shape{left:330px!important;top:0px!important;width:502px!important;height:200px!important;}
+#f1_logo{left:16px!important;top:25px!important;width:236px!important;height:86px!important;}
+#f1_rate_label{left:371.63px!important;top:85px!important;width:159px!important;height:41px!important;font-family:"Inter",sans-serif!important;font-size:36px!important;font-weight:800!important;line-height:42px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_rate_from{left:527.63px!important;top:94.5px!important;width:39px!important;height:28px!important;font-family:"Inter",sans-serif!important;font-size:25.333333px!important;font-weight:800!important;line-height:32px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_rate_num{left:563.63px!important;top:85px!important;width:70px!important;height:38px!important;font-family:"Inter",sans-serif!important;font-size:36px!important;font-weight:800!important;line-height:42px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_full_cost_label{left:377.5px!important;top:13px!important;width:245px!important;height:22px!important;font-family:"Inter",sans-serif!important;font-size:14px!important;font-weight:400!important;line-height:18px!important;letter-spacing:0.64px!important;white-space:pre-wrap!important;}
+#f1_full_cost_num{left:333px!important;top:40px!important;width:334px!important;height:46px!important;font-family:"Inter",sans-serif!important;font-size:36px!important;font-weight:800!important;line-height:34px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_button{left:679px!important;top:87px!important;width:156px!important;height:40px!important;}
+#f1_button_copy{left:705px!important;top:90px!important;width:127px!important;height:37px!important;font-family:"Inter",sans-serif!important;font-size:14.0px!important;font-weight:600!important;line-height:16px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_mortgage_warning{left:0px!important;top:150px!important;width:1200px!important;height:24px!important;font-family:"Roboto Condensed",sans-serif!important;font-size:20px!important;font-weight:300!important;line-height:24px!important;letter-spacing:15.94444px!important;word-spacing:0px!important;white-space:pre-wrap!important;}
+#f1_mortgage_warning_2{left:0px!important;top:174px!important;width:1200px!important;height:24px!important;font-family:"Roboto Condensed",sans-serif!important;font-size:20px!important;font-weight:300!important;line-height:24px!important;letter-spacing:4.60463px!important;word-spacing:0px!important;white-space:pre-wrap!important;}
+#f2_photo{left:769px!important;top:-12px!important;width:384px!important;height:214px!important;}
+#f2_shape{left:390px!important;top:0px!important;width:502px!important;height:200px!important;}
+#f2_logo{left:16px!important;top:25px!important;width:236px!important;height:86px!important;}
+#f2_slogan{left:7px!important;top:129px!important;width:268px!important;height:64px!important;font-family:"Viaoda Libre",sans-serif!important;font-size:28.0px!important;font-weight:400!important;line-height:28px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f2_icon_1{left:331px!important;top:19.344px!important;width:50px!important;height:45.312px!important;}
+#f2_icon_2{left:331px!important;top:77.139px!important;width:40px!important;height:35.862px!important;}
+#f2_icon_3{left:328px!important;top:120.109px!important;width:45px!important;height:40.781px!important;}
+#f2_text_1{left:386px!important;top:39.66px!important;width:343px!important;height:27px!important;font-family:"Inter",sans-serif!important;font-size:25px!important;font-weight:600!important;line-height:24px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f2_text_2{left:386px!important;top:85.28px!important;width:760px!important;height:30px!important;font-family:"Inter",sans-serif!important;font-size:25px!important;font-weight:600!important;line-height:24px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f2_text_3{left:386px!important;top:132px!important;width:432px!important;height:35px!important;font-family:"Inter",sans-serif!important;font-size:25px!important;font-weight:600!important;line-height:24px!important;letter-spacing:0px!important;white-space:pre-wrap!important;}
+#f2_legal{left:19px!important;top:169px!important;width:842px!important;height:28px!important;font-family:"Roboto Condensed",sans-serif!important;font-size:13px!important;font-weight:300!important;line-height:14px!important;letter-spacing:-0.079px!important;white-space:pre-wrap!important;}
+
+#f1_mortgage_warning_2{animation:mv_warning 10s linear infinite both!important}
+
+/* Prevent mortgage lines wrapping into an extra row; keep original 1200x24px blocks. */
+#f1_mortgage_warning,#f1_mortgage_warning_2{white-space:nowrap!important;word-wrap:normal!important;overflow-wrap:normal!important;}
+
+
+/* Mortgage text: native glyph metrics, no transform scaling. */
+#f1_mortgage_warning>.mortgage-fitted-text,#f1_mortgage_warning_2>.mortgage-fitted-text{display:inline-block;white-space:nowrap;transform:none!important}
