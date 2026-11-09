@@ -210,3 +210,10 @@
 
 /* Mortgage text: native glyph metrics, no transform scaling. */
 #f1_mortgage_warning>.mortgage-fitted-text,#f1_mortgage_warning_2>.mortgage-fitted-text{display:inline-block;white-space:nowrap;transform:none!important}
+
+/* DEV v36: approved lower-edge and alpha corrections; animations unchanged. */
+.click-area{position:relative!important;box-shadow:none!important;isolation:isolate}
+.click-area::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:9999;border-top:1px solid #D4D4D4;border-bottom:1px solid #D4D4D4;box-sizing:border-box}
+#f1_mortgage_warning>.mortgage-fitted-text{opacity:.60!important}
+#f1_mortgage_warning_2>.mortgage-fitted-text{opacity:.75!important}
+#f2_legal{color:rgba(229,221,215,.60)!important}
