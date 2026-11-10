@@ -1,0 +1,1 @@
+document.querySelector(".click-area").addEventListener("click",function(e){if(e.button!==0)return;window.callClick()});
