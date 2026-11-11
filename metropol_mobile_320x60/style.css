@@ -1,0 +1,15 @@
+@font-face{font-family:SangBleu;src:url("fonts/sangbleu-sunrise-regular.ttf") format("truetype");font-display:block}@font-face{font-family:RobotoCL;src:url("fonts/roboto-condensed-light.ttf") format("truetype");font-display:block}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:60px;overflow:hidden;background:transparent}.click-area{width:100%;height:60px;position:relative;background:#1B331F;cursor:pointer;overflow:hidden}.banner{position:absolute;left:50%;top:0;transform:translateX(-50%);width:320px;height:60px;overflow:hidden;background:#1B331F;color:#EDE3CC;isolation:isolate}.frame{position:absolute;inset:0;opacity:0;pointer-events:none}.frame-one{animation:oneShow 16s ease-in-out infinite both}.frame-two{animation:twoShow 16s ease-in-out infinite both}.frame-three{animation:threeShow 16s ease-in-out infinite both}.shared{position:absolute;inset:0;opacity:0;animation:sharedShow 16s ease-in-out infinite both;pointer-events:none}.obj{position:absolute;display:block;margin:0;padding:0;overflow:visible}.obj.text{white-space:pre;transform-origin:center center}.obj.image{object-fit:fill}.obj.image.photo{object-fit:cover;object-position:50% 43%;transform-origin:center;animation:photoFloat 16s ease-in-out infinite both}.legal{white-space:pre;text-align:center}.frame-one .name{animation:riseA 16s ease-in-out infinite both}.frame-one .club{animation:riseB 16s ease-in-out infinite both}.frame-one .park{animation:riseC 16s ease-in-out infinite both}.frame-two .apt{animation:riseA 16s ease-in-out infinite both}.frame-two .discount{animation:riseB 16s ease-in-out infinite both}.frame-two .badge-image,.frame-two [data-id="f2_from"],.frame-two [data-id="f2_amount"],.frame-two [data-id="f2_mln"]{animation:badge 16s ease-in-out infinite both}
+/* Original source: 16-second cycle with 5s ad1, 5s ad2, 6s legal. */
+@keyframes sharedShow{0%{opacity:0}5%{opacity:1}58%{opacity:1}66%{opacity:0}100%{opacity:0}}
+@keyframes oneShow{0%{opacity:0}5%{opacity:1}26.25%{opacity:1}33.125%,100%{opacity:0}}
+@keyframes twoShow{0%,29.375%{opacity:0}34.375%{opacity:1}57.5%{opacity:1}64.375%,100%{opacity:0}}
+@keyframes threeShow{0%,61.25%{opacity:0}66.875%{opacity:1}94.375%{opacity:1}100%{opacity:0}}
+@keyframes photoFloat{0%{transform:scale(1.06)}64%{transform:scale(1)}100%{transform:scale(1)}}
+@keyframes riseA{0%{transform:translateY(5px);opacity:0}8%,100%{transform:translateY(0);opacity:1}}
+@keyframes riseB{0%{transform:translateY(8px);opacity:0}10%,100%{transform:translateY(0);opacity:1}}
+@keyframes riseC{0%{transform:translateY(8px);opacity:0}12%,100%{transform:translateY(0);opacity:1}}
+@keyframes badge{0%{transform:scale(.96);opacity:0}40%,100%{transform:scale(1);opacity:1}}
+
+/* Invisible non-interactive mobile technical strip */
+.technical-strip{position:absolute;left:0;top:0;width:320px;height:18px;opacity:0;pointer-events:none;z-index:100;background:transparent}
