@@ -2,7 +2,7 @@
 @font-face{font-family:"Bebas Neue";src:url("fonts/bebas-neue.ttf") format("truetype");font-display:block}
 @font-face{font-family:"Viaoda Libre";src:url("fonts/viaoda-libre.ttf") format("truetype");font-display:block}
 @font-face{font-family:"Roboto Condensed";src:url("fonts/roboto-condensed.ttf") format("truetype");font-display:block}
-@font-face{font-family:"Inter";src:url("fonts/inter.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:block}@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:block}@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.woff2") format("woff2");font-style:normal;font-weight:800;font-display:block}
 @keyframes my_in_1_0{0.0000%,1.0000%{opacity:0}4.6667%,66.6667%{opacity:0.55}}@keyframes my_in_1_1{0.0000%,2.3333%{opacity:0}6.0000%,66.6667%{opacity:0.55}}@keyframes my_in_1_2{0.0000%,3.6667%{opacity:0}7.3333%,66.6667%{opacity:1.0}}@keyframes my_in_1_3{0.0000%,5.0000%{opacity:0}8.6667%,66.6667%{opacity:1.0}}@keyframes my_in_1_4{0.0000%,6.3333%{opacity:0}10.0000%,66.6667%{opacity:1.0}}@keyframes my_in_1_5{0.0000%,7.6667%{opacity:0}11.3333%,66.6667%{opacity:1.0}}@keyframes my_in_1_6{0.0000%,9.0000%{opacity:0}12.6667%,66.6667%{opacity:0.8}}@keyframes my_in_1_7{0.0000%,10.3333%{opacity:0}14.0000%,66.6667%{opacity:1.0}}@keyframes my_in_1_8{0.0000%,11.6667%{opacity:0}15.3333%,66.6667%{opacity:1.0}}@keyframes my_in_2_0{0.0000%,33.6667%{opacity:0}37.3333%,66.6667%{opacity:1.0}}@keyframes my_in_2_1{0.0000%,35.0000%{opacity:0}38.6667%,66.6667%{opacity:1.0}}@keyframes my_in_2_2{0.0000%,36.3333%{opacity:0}40.0000%,66.6667%{opacity:1.0}}@keyframes my_in_2_3{0.0000%,37.6667%{opacity:0}41.3333%,66.6667%{opacity:1.0}}@keyframes my_in_2_4{0.0000%,39.0000%{opacity:0}42.6667%,66.6667%{opacity:1.0}}
 
 /* DEV QUICK PREVIEW v1.4: restored working v1.2 layout, synchronized motion */
@@ -271,7 +271,7 @@
 #shared_bg2 {animation:none!important;transform:none!important;opacity:1!important;visibility:visible!important;z-index:3!important}
 #f1_shape,#f2_shape {display:none!important}
 /* Rate headline: exactly aligned and no scale or overshoot; single shared motion. */
-#f1_rate_label,#f1_rate_from,#f1_rate_num {animation:may17_rate_no_bounce 15s cubic-bezier(.2,.8,.2,1) infinite both!important;transform:none!important;transform-origin:50% 50%!important}
+#f1_rate_label,#f1_rate_from,#f1_rate_num {animation:may17_rate_no_bounce 15s cubic-bezier(.2,.8,.2,1) infinite both!important;transform-origin:50% 50%!important}
 @keyframes may17_rate_no_bounce {0%{opacity:0}5%,29.333%{opacity:1}33.333%,100%{opacity:0}}
 #f1_rate_label {top:86px!important}
 #f1_rate_from {top:94.5px!important}
@@ -305,3 +305,19 @@
 #f1_mortgage_warning,#f1_mortgage_warning_2{color:#FFFFFF!important}
 #f1_mortgage_warning>.mortgage-fitted-text,#f1_mortgage_warning_2>.mortgage-fitted-text{color:#FFFFFF!important;opacity:.75!important}
 /* No frame composition change. End-of-cycle continuity evaluated separately. */
+
+
+/* Restore original increase-based entrance without the overshoot/vertical bounce rejected previously.
+   Use one keyframe for all three characters and keep approved final coordinates. */
+#f1_rate_label,#f1_rate_from,#f1_rate_num{
+  animation:may17_rate_intro_scale_v5 15s cubic-bezier(.2,.78,.22,1) infinite both!important;
+  transform-origin:50% 50%!important;
+}
+@keyframes may17_rate_intro_scale_v5{
+  0%{opacity:0;transform:scale(.94)}
+  5%{opacity:1;transform:scale(1)}
+  29.333%{opacity:1;transform:scale(1)}
+  33.333%,100%{opacity:0;transform:scale(1)}
+}
+
+#f1_rate_from{left:533.13px!important}
