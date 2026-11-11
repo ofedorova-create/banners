@@ -1,0 +1,27 @@
+@font-face{font-family:GolosText;src:url("fonts/golos-text-medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:block}@font-face{font-family:RobotoCondensed;src:url("fonts/roboto-condensed-light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:block}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;overflow:hidden}.click-area{position:relative;display:block;width:100%;height:200px;overflow:hidden;cursor:pointer;touch-action:manipulation;background:#822345}.banner{position:absolute;top:0;left:50%;transform:translateX(-50%);width:1200px;height:200px;overflow:hidden;background:#822345}.persistent-photo,.persistent-logo,.obj{position:absolute;display:block}.persistent-photo{left:530px;top:0;width:670px;height:200px;object-fit:cover;object-position:center center;z-index:1}.persistent-logo{left:643px;top:113px;width:527px;height:64px;object-fit:contain;filter:drop-shadow(0px 3px 1px rgba(0,0,0,.98)) drop-shadow(0px 5px 5px rgba(0,0,0,.98));z-index:5}.frame{position:absolute;inset:0;opacity:0;z-index:10;pointer-events:none}.obj.text{white-space:normal;overflow:visible}.hard-break{display:block}.obj.image{object-fit:contain}.frame-1{animation:frameOne 18s linear infinite}.frame-2{animation:frameTwo 18s linear infinite}.frame-3{animation:frameThree 18s linear infinite}.frame-4{animation:frameFour 18s linear infinite}@keyframes frameOne{0%,19.444%{opacity:1}22.222%,99.999%{opacity:0}100%{opacity:1}}@keyframes frameTwo{0%,19.444%,44.444%,100%{opacity:0}22.222%,41.666%{opacity:1}}@keyframes frameThree{0%,41.666%,66.666%,100%{opacity:0}44.444%,63.888%{opacity:1}}@keyframes frameFour{0%,63.888%,97.222%,100%{opacity:0}66.666%,94.444%{opacity:1}}
+/* QUICK PREVIEW v1.2: uniform left-to-right, zero vertical offset; legal opacity-only */
+.motion-line{display:block;transform-origin:0 50%;will-change:transform,opacity,filter}
+.frame-1 .motion-line,.frame-2 .motion-line,.frame-3 .motion-line{opacity:0}
+.frame-4 [data-id="f4_kvs_logo"],.frame-4 [data-id="f4_legal"]{opacity:0;will-change:transform,opacity}
+
+.frame-1 .line-1{animation:burstF1L1 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF1L1{0%,0.434%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)} 3.889%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)}}
+.frame-1 .line-2{animation:burstF1L2 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF1L2{0%,1.823%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)} 5.278%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)}}
+.frame-1 .line-3{animation:burstF1L3 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF1L3{0%,3.212%{opacity:0;transform:translate3d(-14px,0px,0);filter:blur(2.5px)} 6.667%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-14px,0px,0);filter:blur(2.5px)}}
+.frame-2 .line-1{animation:burstF2L1 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF2L1{0%,22.657%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)} 26.111%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)}}
+.frame-2 .line-2{animation:burstF2L2 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF2L2{0%,24.046%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)} 27.500%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)}}
+.frame-2 .line-3{animation:burstF2L3 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF2L3{0%,25.434%{opacity:0;transform:translate3d(-14px,0px,0);filter:blur(2.5px)} 28.889%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-14px,0px,0);filter:blur(2.5px)}}
+.frame-3 .line-1{animation:burstF3L1 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF3L1{0%,44.879%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)} 48.333%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-39px,0px,0);filter:blur(2.5px)}}
+.frame-3 .line-2{animation:burstF3L2 18s cubic-bezier(.22,.78,.21,1) infinite}
+@keyframes burstF3L2{0%,46.268%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)} 49.722%,96.500%{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}100%{opacity:0;transform:translate3d(-25px,0px,0);filter:blur(2.5px)}}
+.frame-4 [data-id="f4_kvs_logo"]{animation:kvsLogoPop 18s cubic-bezier(.2,.84,.25,1) infinite}
+@keyframes kvsLogoPop{0%,67.667%{opacity:0;transform:translate3d(-18px,0,0)}71.333%,97.3%{opacity:1;transform:translate3d(0,0,0)}100%{opacity:0;transform:translate3d(-18px,0,0)}}
+.frame-4 [data-id="f4_legal"]{animation:kvsLegalSlide 18s cubic-bezier(.2,.84,.25,1) infinite}
+@keyframes kvsLegalSlide{0%,67.667%{opacity:0;transform:none}71.333%,97.3%{opacity:1;transform:none}100%{opacity:0;transform:none}}
