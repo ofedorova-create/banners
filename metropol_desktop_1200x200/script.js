@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){const clickArea=document.querySelector(".click-area");if(!clickArea)return;clickArea.addEventListener("click",function(event){if(event.button!==0)return;if(typeof window.callClick==="function")window.callClick()})});
+document.addEventListener("DOMContentLoaded",function(){const area=document.querySelector(".click-area");if(area)area.addEventListener("click",function(event){if(event.button!==0)return;if(typeof window.callClick==="function")window.callClick();});});
