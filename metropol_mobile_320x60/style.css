@@ -13,3 +13,6 @@
 
 /* Invisible non-interactive mobile technical strip */
 .technical-strip{position:absolute;left:0;top:0;width:320px;height:18px;opacity:0;pointer-events:none;z-index:100;background:transparent}
+
+@font-face{font-family:RobotoCR;src:url("fonts/roboto-condensed-regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:block}
+.frame-three .legal{white-space:normal;overflow:visible}
