@@ -1,0 +1,38 @@
+@font-face{font-family:"DIN Pro Condensed";src:url("fonts/DINPro-CondensedBold.woff2") format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:"DIN Pro Condensed";src:url("fonts/DINPro-CondensedMedium.woff2") format("woff2");font-weight:500;font-display:block}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent}
+.click-area{width:100%;height:60px;position:relative;background:#FFEC01;cursor:pointer;overflow:hidden}
+.banner{position:absolute;left:50%;top:0;transform:translateX(-50%);width:320px;height:60px;overflow:hidden;background:#FFEC01;pointer-events:none}
+.technical-strip{position:absolute;left:0;top:0;width:320px;height:18px;opacity:0;pointer-events:none;z-index:0}
+.frame,.shared{position:absolute;inset:0;pointer-events:none}
+.frame{opacity:0;animation:12s linear infinite}.shared{animation:sharedHold 12s linear infinite;z-index:1}#f1,#f2{z-index:2}#f3{z-index:4}
+.layer{position:absolute;display:block;padding:0;margin:0;max-width:none}.text{font-synthesis:none;white-space:pre-line}.linebreak{display:block}
+#f1{animation-name:frameOne}#f2{animation-name:frameTwo}#f3{animation-name:frameThree}
+@keyframes frameOne{0%,29.58%{opacity:1}33.33%,100%{opacity:0}}
+@keyframes frameTwo{0%,33.33%{opacity:0}37.08%,62.5%{opacity:1}66.667%,100%{opacity:0}}
+@keyframes frameThree{0%,66.667%{opacity:0}70.41%,95.83%{opacity:1}100%{opacity:0}}
+@keyframes sharedHold{0%,62.5%{opacity:1}66.667%,100%{opacity:0}}
+#f1_headline{animation:riseOne 12s ease-out infinite}#f2_headline,#f2_to,#f2_discount{animation:riseTwo 12s ease-out infinite}
+@keyframes riseOne{0%{transform:translateY(7px);opacity:0}5%,100%{transform:translateY(0);opacity:1}}
+@keyframes riseTwo{0%,33.333%{transform:translateY(7px);opacity:0}38.333%,100%{transform:translateY(0);opacity:1}}
+#f1_logo{transform-origin:center center;animation:logoIntro 12s ease-out infinite}
+@keyframes logoIntro{0%{transform:scale(.76);opacity:0}6%,100%{transform:scale(1);opacity:1}}
+#f1_viz_pin,#f1_viz_text{animation:markerIntro 12s ease-out infinite}
+@keyframes markerIntro{0%,3%{transform:translateY(6px);opacity:0}9%,100%{transform:translateY(0);opacity:1}}
+.banner:not(.fonts-ready) .frame,.banner:not(.fonts-ready) .shared,.banner:not(.fonts-ready) .layer{animation-play-state:paused}
+.banner:not(.fonts-ready) .text{visibility:hidden}
+#f1_photo{left:163px;top:0px;width:157px;height:60px;z-index:2;object-fit:cover;object-position:center center;}
+#f1_photo_corner_shade{left:246px;top:35px;width:74px;height:25px;z-index:9;object-fit:fill;object-position:center center;}
+#f1_logo{left:5px;top:23px;width:27px;height:28px;z-index:6;object-fit:fill;object-position:center center;}
+#f1_viz_pin{left:263.45px;top:42.7px;width:8.1px;height:12.6px;z-index:10;object-fit:fill;object-position:center center;filter:drop-shadow(0px 1px 1.4px rgba(0,0,0,0.95)) drop-shadow(0px 0px 2.4px rgba(0,0,0,0.82));}
+#f1_viz_text{left:275px;top:45px;width:34px;height:11px;z-index:11;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:11px;line-height:10px;letter-spacing:0px;color:#ffffff;text-align:left;white-space:nowrap;text-shadow:0px 1px 2px rgba(0,0,0,0.96), 0px 0px 4px rgba(0,0,0,0.86);}
+#f1_card{left:47px;top:12px;width:131px;height:48px;z-index:4;object-fit:fill;object-position:center center;}
+#f1_headline{left:60px;top:16px;width:129px;height:40px;z-index:8;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:17.0px;line-height:18.2px;letter-spacing:0px;color:#070707;text-align:left;white-space:nowrap;}
+#f2_card{left:47px;top:12px;width:151px;height:48px;z-index:4;object-fit:fill;object-position:center center;}
+#f2_headline{left:60px;top:23px;width:69px;height:31px;z-index:8;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:14px;line-height:14px;letter-spacing:0px;color:#070707;text-align:left;white-space:nowrap;}
+#f2_to{left:128px;top:25.67px;width:19px;height:11px;z-index:8;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:10px;line-height:11px;letter-spacing:0px;color:#070707;text-align:center;white-space:nowrap;}
+#f2_discount{left:129.5px;top:23.67px;width:49px;height:25px;z-index:9;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:32px;line-height:25px;letter-spacing:-1px;color:#070707;text-align:left;white-space:nowrap;}
+#f3_legal{left:4px;top:20px;width:312px;height:35px;z-index:8;font-family:"DIN Pro Condensed",sans-serif;font-weight:500;font-size:10px;line-height:11px;letter-spacing:-0.1px;color:#000000;text-align:center;opacity:0.7;}
+
+/* Mobile legal visible-ink guard: retain approved box, shift ink +1px without moving the box */
+#f3_legal{padding-top:1px;transform:none}
