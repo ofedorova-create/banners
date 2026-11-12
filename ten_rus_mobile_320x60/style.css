@@ -1,0 +1,28 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;padding:0;background:transparent}body{overflow:hidden}.click-area{position:relative;width:100%;height:60px;background:#FFEC01;cursor:pointer;overflow:hidden}.banner{position:relative;width:320px;height:60px;margin:0 auto;overflow:hidden;background:#FFEC01;color:#000;font-family:DINProCondensed,sans-serif}.scene,.adscene{position:absolute;inset:0;pointer-events:none}.layer{position:absolute;pointer-events:none}
+@font-face{font-family:DINProCondensed;src:url(fonts/DINPro-CondensedMedium.woff2) format("woff2");font-weight:500;font-display:block}@font-face{font-family:DINProCondensed;src:url(fonts/DINPro-CondensedBold.woff2) format("woff2");font-weight:700;font-display:block}
+.banner:not(.fonts-ready) .photo,.banner:not(.fonts-ready) .card,.banner:not(.fonts-ready) .logo,.banner:not(.fonts-ready) .pin,.banner:not(.fonts-ready) .viztext,.banner:not(.fonts-ready) .first,.banner:not(.fonts-ready) .second,.banner:not(.fonts-ready) .legal{animation-play-state:paused!important}
+.banner:not(.fonts-ready) .viztext,.banner:not(.fonts-ready) .first,.banner:not(.fonts-ready) .second,.banner:not(.fonts-ready) .legal{visibility:hidden}
+
+.photo{opacity:0;animation:adScene 12s ease-in-out infinite}
+.card{opacity:0;animation:cardDown 12s cubic-bezier(.22,.61,.36,1) infinite}
+.logo{opacity:0;animation:logoIn 12s cubic-bezier(.22,.61,.36,1) infinite;transform-origin:50% 50%}
+.pin,.viztext{opacity:0;animation:vizIn 12s ease-in-out infinite}
+.first{opacity:0;animation:firstText 12s cubic-bezier(.22,.61,.36,1) infinite}
+.second{opacity:0;animation:secondText 12s cubic-bezier(.22,.61,.36,1) infinite}
+.legal{opacity:0;animation:legalIn 12s ease-in-out infinite}
+@keyframes adScene{0%,1%{opacity:0}7%,62%{opacity:1}70%,100%{opacity:0}}
+@keyframes cardDown{0%,1%{opacity:0;transform:translate3d(0,13px,0)}7%,62%{opacity:1;transform:translate3d(0,0,0)}70%,100%{opacity:0;transform:translate3d(0,0,0)}}
+@keyframes logoIn{0%,3%{opacity:0;transform:scale(.76)}9%,90%{opacity:1;transform:scale(1)}95.833%,100%{opacity:0;transform:scale(1)}}
+@keyframes vizIn{0%,6%{opacity:0;transform:translate3d(0,7px,0)}13%,62%{opacity:1;transform:translate3d(0,0,0)}70%,100%{opacity:0;transform:translate3d(0,0,0)}}
+@keyframes firstText{0%{opacity:0;transform:translate3d(0,7px,0)}7%,26%{opacity:1;transform:translate3d(0,0,0)}32%,100%{opacity:0;transform:translate3d(0,0,0)}}
+@keyframes secondText{0%,34%{opacity:0;transform:translate3d(0,7px,0)}41%,60%{opacity:1;transform:translate3d(0,0,0)}67%,100%{opacity:0;transform:translate3d(0,0,0)}}
+@keyframes legalIn{0%,69%{opacity:0}75%,89%{opacity:1}95.833%,100%{opacity:0}}
+
+.photo{left:163px;top:0px;width:157px;height:60px;object-fit:cover;object-position:center center}
+.card{left:47px;top:12px;width:131px;height:48px;object-fit:fill;object-position:center center}
+.pin{left:281px;top:42px;width:9px;height:14px;object-fit:fill;object-position:center center}
+.viztext{left:292px;top:42px;width:27px;height:15px;font-size:14px;line-height:14px;font-weight:700;letter-spacing:0px;color:#ffffff;text-align:left;white-space:pre-wrap;overflow:visible}
+.logo{left:5px;top:25px;width:27px;height:28px;object-fit:fill;object-position:center center}
+.first{left:60px;top:16px;width:129px;height:40px;font-size:18px;line-height:19px;font-weight:700;letter-spacing:0px;color:#070707;text-align:left;white-space:pre-wrap;overflow:visible}
+.second{left:60px;top:16px;width:129px;height:40px;font-size:18px;line-height:19px;font-weight:700;letter-spacing:0px;color:#070707;text-align:left;white-space:pre-wrap;overflow:visible}
+.legal{left:60px;top:22px;width:253px;height:37px;font-size:12px;line-height:10.5px;font-weight:500;letter-spacing:-0.09px;color:#252525;text-align:left;white-space:pre-wrap;overflow:visible}
