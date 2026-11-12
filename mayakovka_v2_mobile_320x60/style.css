@@ -1,10 +1,10 @@
-@font-face{font-family:"Inter";src:url("fonts/inter-art-v03.woff2") format("woff2");font-style:normal;font-weight:500;font-display:block}
-@font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.ttf")}
-@font-face{font-family:"Viaoda Libre";src:url("fonts/font_adb53ede2510.ttf")}
+@font-face{font-family:"Inter";src:url("fonts/inter_art_v03.woff") format("woff");font-style:normal;font-weight:500;font-display:block}
+@font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.woff");font-display:block}
+@font-face{font-family:"Viaoda Libre";src:url("fonts/font_adb53ede2510.woff");font-display:block}
 *{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent;overflow:hidden}.click-area{height:60px;width:100%;background:#3C2D28;display:flex;justify-content:center;cursor:pointer}.banner{width:320px;height:60px;position:relative;flex:0 0 320px;overflow:hidden;background:transparent}.frame{position:absolute;inset:0;opacity:0;pointer-events:none;animation:fadeCycle 12s linear infinite both}.frame.f1{animation-name:frameOne}.frame.f2{animation-name:frameTwo}.frame.f3{animation-name:frameThree}.layer{position:absolute;white-space:pre-wrap}.layer.img{object-fit:fill;display:block}.frame .enter{animation:in 12s ease-in-out infinite both}.f1 .enter{animation-name:inFirst}.f2 .enter{animation-name:inSecond}.f3 .enter{animation-name:inThird}
 @keyframes frameOne{0%,27%{opacity:1}33%,100%{opacity:0}}@keyframes frameTwo{0%,27%{opacity:0}33%,61%{opacity:1}67%,100%{opacity:0}}@keyframes frameThree{0%,61%{opacity:0}67%,94%{opacity:1}100%{opacity:0}}
 @keyframes inFirst{0%{opacity:0;transform:translateY(4px)}6%,27%{opacity:1;transform:none}33%,100%{opacity:0;transform:none}}@keyframes inSecond{0%,33%{opacity:0;transform:translateY(4px)}39%,61%{opacity:1;transform:none}67%,100%{opacity:0;transform:none}}@keyframes inThird{0%,67%{opacity:0}72%,94%{opacity:1}100%{opacity:0}}
- @font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.ttf");font-weight:400;font-style:normal}
+ @font-face{font-family:"Roboto Condensed";src:url("fonts/font_936069d5e46d.woff");font-weight:400;font-style:normal;font-display:block}
 .layer:not(img){white-space:pre !important;overflow:visible}.layer img{display:block}
 
 /* Mobile 12 — motion adapted from approved desktop 11; three frames, 12s */
@@ -148,3 +148,6 @@
 
 /* QA repair candidate v1.2: keep legal container x4/y19/w312/h37; move text ink inside it. */
 #f3_legal{padding-top:2px}
+
+/* Hold original timeline at t=0 until required local fonts load. No motion properties altered. */
+html:not(.fonts-ready) .banner,html:not(.fonts-ready) .banner *,html:not(.fonts-ready) .banner *::before,html:not(.fonts-ready) .banner *::after{animation-play-state:paused!important}html:not(.fonts-ready) .banner .layer:not(img){visibility:hidden!important}
