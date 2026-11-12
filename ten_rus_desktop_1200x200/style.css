@@ -12,63 +12,63 @@
 #f2_headline{left:160px;top:12px;width:359px;height:126px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:54px;line-height:56px;font-weight:700;letter-spacing:0px;color:#090909;text-align:left}
 #f2_legal{left:129px;top:160px;width:380px;height:33px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:14px;line-height:14.75px;font-weight:500;letter-spacing:0px;color:rgba(0,0,0,.5);text-align:left}
 
-/* DEV QUICK PREVIEW v6 — user-approved geometry unchanged. 12s cycle:
-   smoother first headline entrance, second copy fades before card,
-   card/logo/viz share a linear fade at 84–95.833%, blank interval 11.5–12s (0.5 second). */
-.c-card{opacity:0;animation:cardDownAndOut 12s cubic-bezier(.22,.61,.36,1) infinite;transform-origin:center top;will-change:transform,opacity}
-.c-logo{opacity:0;animation:logoIn 12s ease-in-out infinite;will-change:transform,opacity}
-.c-viz_pin{opacity:0;animation:vizPinIn 12s ease-in-out infinite;transform-origin:center bottom;will-change:transform,opacity}
-.c-viz_text{opacity:0;animation:vizTextIn 12s ease-in-out infinite;will-change:transform,opacity}
-#f1_headline{animation:firstHeadline 12s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform,opacity}
-#f2_headline{animation:secondHeadline 12s ease-in-out infinite}
-#f1_site,#f1_phone{animation:contacts 12s ease-in-out infinite}
-#f2_legal{animation:legal 12s ease-in-out infinite}
+/* DEV MOTION v13: timing copied from user-approved live preview; font gate retained from v8. */
+.c-card{opacity:0;animation:cardDownAndOut 10.5s cubic-bezier(.22,.61,.36,1) infinite;transform-origin:center top;will-change:transform,opacity}
+.c-logo{opacity:0;animation:logoIn 10.5s ease-in-out infinite;will-change:transform,opacity}
+.c-viz_pin{opacity:0;animation:vizPinIn 10.5s ease-in-out infinite;transform-origin:center bottom;will-change:transform,opacity}
+.c-viz_text{opacity:0;animation:vizTextIn 10.5s ease-in-out infinite;will-change:transform,opacity}
+#f1_headline{animation:firstHeadline 10.5s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform,opacity}
+#f2_headline{animation:secondHeadline 10.5s cubic-bezier(.22,.61,.36,1) infinite}
+#f1_site,#f1_phone{animation:contacts 10.5s ease-in-out infinite}
+#f2_legal{animation:legal 10.5s ease-in-out infinite}
 
-/* TECH FIX v8 — hold the approved 12s motion at t=0 until both DINPro WOFF2 faces are ready. */
+/* TECH FIX v8 — hold the approved 10.5s motion at t=0 until both DINPro WOFF2 faces are ready. */
 .banner:not(.fonts-ready) .c-card,.banner:not(.fonts-ready) .c-logo,.banner:not(.fonts-ready) .c-viz_pin,.banner:not(.fonts-ready) .c-viz_text,.banner:not(.fonts-ready) #f1_headline,.banner:not(.fonts-ready) #f1_site,.banner:not(.fonts-ready) #f1_phone,.banner:not(.fonts-ready) #f2_headline,.banner:not(.fonts-ready) #f2_legal{animation-play-state:paused!important}
 .banner:not(.fonts-ready) .c-viz_text,.banner:not(.fonts-ready) #f1_headline,.banner:not(.fonts-ready) #f1_site,.banner:not(.fonts-ready) #f1_phone,.banner:not(.fonts-ready) #f2_headline,.banner:not(.fonts-ready) #f2_legal{visibility:hidden}
 @keyframes cardDownAndOut{
-  0%,1%{opacity:0;transform:translate3d(0,-24px,0)}
-  7%{opacity:1;transform:translate3d(0,0,0)}
-  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
-  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,1.142857%{opacity:0;transform:translate3d(0,-24px,0)}
+  8%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes logoIn{
-  0%,3%{opacity:0;transform:translate3d(0,-12px,0)}
-  10%{opacity:1;transform:translate3d(0,0,0)}
-  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
-  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,3.428571%{opacity:0;transform:translate3d(0,-12px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes vizPinIn{
-  0%,7%{opacity:0;transform:translate3d(0,-15px,0)}
-  15%{opacity:1;transform:translate3d(0,0,0)}
-  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
-  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,4.571429%{opacity:0;transform:translate3d(0,-15px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes vizTextIn{
-  0%,9%{opacity:0;transform:translate3d(0,-12px,0)}
-  16%{opacity:1;transform:translate3d(0,0,0)}
-  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
-  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,4.571429%{opacity:0;transform:translate3d(0,-12px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes firstHeadline{
   0%{opacity:0;transform:translate3d(0,-8px,0)}
-  8%{opacity:1;transform:translate3d(0,0,0)}
-  36%{opacity:1;transform:translate3d(0,0,0)}
-  42%,100%{opacity:0;transform:translate3d(0,0,0)}
+  5.714286%{opacity:1;transform:translate3d(0,0,0)}
+  43.619048%{opacity:1;transform:translate3d(0,0,0)}
+  47.619048%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes contacts{
-  0%,11%{opacity:0;transform:translate3d(0,-8px,0)}
-  17%,36%{opacity:1;transform:translate3d(0,0,0)}
-  42%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,8%{opacity:0;transform:translate3d(0,-8px,0)}
+  12.571429%,43.619048%{opacity:1;transform:translate3d(0,0,0)}
+  47.619048%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes secondHeadline{
-  0%,45%{opacity:0;transform:translate3d(0,-13px,0)}
-  52%,76%{opacity:1;transform:translate3d(0,0,0)}
-  82%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,47.619048%{opacity:0;transform:translate3d(0,-8px,0)}
+  53.333333%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
 @keyframes legal{
-  0%,49%{opacity:0;transform:translate3d(0,-8px,0)}
-  55%,76%{opacity:1;transform:translate3d(0,0,0)}
-  82%,100%{opacity:0;transform:translate3d(0,0,0)}
+  0%,48.761905%{opacity:0;transform:translate3d(0,0,0)}
+  53.333333%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
 }
