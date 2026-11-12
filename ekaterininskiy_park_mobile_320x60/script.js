@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelector(".click-area")?.addEventListener("mouseup",e=>{if(e.button===0&&typeof window.callClick==="function")window.callClick()})});
+(function(){var b=document.getElementById('banner'),done=false;function ready(){if(done)return;done=true;b.classList.add('fonts-ready')}var timeout=setTimeout(ready,2500);Promise.all([document.fonts.load('700 19px "DIN Pro Condensed"'),document.fonts.load('500 10px "DIN Pro Condensed"'),document.fonts.ready]).then(function(){clearTimeout(timeout);ready()},ready);})();

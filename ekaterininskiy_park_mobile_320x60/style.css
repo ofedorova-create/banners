@@ -1,0 +1,45 @@
+@font-face{font-family:"DIN Pro Condensed";src:url("fonts/DINPro-CondensedBold.woff2") format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:"DIN Pro Condensed";src:url("fonts/DINPro-CondensedMedium.woff2") format("woff2");font-weight:500;font-display:block}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:transparent}.click-area{display:block;position:relative;width:100%;height:60px;background:#FFEC01;cursor:pointer;overflow:hidden}.banner{width:320px;height:60px;position:absolute;left:50%;top:0;transform:translateX(-50%);overflow:hidden;background:#FFEC01;pointer-events:none}.frame{position:absolute;inset:0;opacity:0;animation-duration:12s;animation-iteration-count:infinite;animation-timing-function:linear}.layer{position:absolute;display:block;margin:0;padding:0;max-width:none;box-sizing:border-box}.linebreak{display:block}.image{user-select:none}.text{font-synthesis:none}
+#f1{animation-name:showF1}#f2{animation-name:showF2}#f3{animation-name:showF3}
+@keyframes showF1{0%,29.58%{opacity:1}33.33%,100%{opacity:0}}
+@keyframes showF2{0%,33.33%{opacity:0}37.08%,62.91%{opacity:1}66.66%,100%{opacity:0}}
+@keyframes showF3{0%,66.66%{opacity:0}70.41%,95.83%{opacity:1}100%{opacity:0}}
+#f1_headline,#f2_headline,#f2_to,#f2_discount{animation:riseIn 12s ease-out infinite}
+#f1_headline{animation-name:riseF1}#f2_headline{animation-name:riseF2}#f2_to,#f2_discount{animation-name:riseF2Delayed}
+@keyframes riseF1{0%{transform:translateY(7px);opacity:0}5%{transform:translateY(0);opacity:1}33.33%,100%{transform:translateY(0);opacity:1}}
+@keyframes riseF2{0%,33.33%{transform:translateY(7px);opacity:0}38.33%,100%{transform:translateY(0);opacity:1}}
+@keyframes riseF2Delayed{0%,35%{transform:translateY(7px);opacity:0}40%,100%{transform:translateY(0);opacity:1}}
+#f1_logo,#f2_logo{transform-origin:center center;animation:logoGrow 12s ease-out infinite}#f1_logo{animation-name:logoF1}#f2_logo{animation-name:logoF2}
+@keyframes logoF1{0%{transform:scale(.76);opacity:0}6%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes logoF2{0%,33.33%{transform:scale(.76);opacity:0}39.33%,100%{transform:scale(1);opacity:1}}
+#f1_viz_pin,#f1_viz_text,#f2_viz_pin,#f2_viz_text{animation-duration:12s;animation-iteration-count:infinite;animation-timing-function:ease-out}#f1_viz_pin,#f1_viz_text{animation-name:vizF1}#f2_viz_pin,#f2_viz_text{animation-name:vizF2}
+@keyframes vizF1{0%,3%{transform:translateY(6px);opacity:0}9%,100%{transform:translateY(0);opacity:1}}
+@keyframes vizF2{0%,36.33%{transform:translateY(6px);opacity:0}42.33%,100%{transform:translateY(0);opacity:1}}
+/* Legal fades without movement */#f3_legal{transform:none}
+/* First-load font readiness gate */.banner:not(.fonts-ready) .frame{animation-play-state:paused}.banner:not(.fonts-ready) .text{visibility:hidden}
+#f1_photo{left:163px;top:0px;width:157px;height:60px;z-index:2;object-fit:cover;object-position:center top;}#f1_photo_corner_shade{left:202px;top:17px;width:118px;height:43px;z-index:20;object-fit:fill;object-position:center center;}#f1_card{left:47px;top:12px;width:148px;height:48px;z-index:5;object-fit:fill;object-position:center center;}#f1_logo{left:5px;top:23px;width:27px;height:28px;z-index:7;object-fit:fill;object-position:center center;}#f1_headline{left:61px;top:17px;width:140px;height:35px;z-index:9;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:19px;line-height:20.25px;letter-spacing:0px;color:#070707;text-align:left;opacity:1;white-space:nowrap;}#f1_viz_pin{left:262px;top:43px;width:10px;height:14px;z-index:25;object-fit:fill;object-position:center center;filter:drop-shadow(0px 2px 3px rgba(0,0,0,0.8));}#f1_viz_text{left:274px;top:43px;width:46px;height:14px;z-index:26;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:10px;line-height:13px;letter-spacing:0px;color:#FFFFFF;text-align:left;opacity:1;white-space:nowrap;text-shadow:0px 2px 5px rgba(0,0,0,0.95), 0px 2px 8px rgba(0,0,0,0.7);}#f2_photo{left:163px;top:0px;width:157px;height:60px;z-index:2;object-fit:cover;object-position:center top;}#f2_photo_corner_shade{left:202px;top:17px;width:118px;height:43px;z-index:20;object-fit:fill;object-position:center center;}#f2_card{left:47px;top:12px;width:165px;height:48px;z-index:5;object-fit:fill;object-position:center center;}#f2_logo{left:5px;top:23px;width:27px;height:28px;z-index:7;object-fit:fill;object-position:center center;}#f2_headline{left:61px;top:20px;width:84px;height:35px;z-index:9;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:15px;line-height:16px;letter-spacing:0px;color:#070707;text-align:left;opacity:1;white-space:nowrap;}#f2_viz_pin{left:262px;top:43px;width:10px;height:14px;z-index:25;object-fit:fill;object-position:center center;filter:drop-shadow(0px 2px 3px rgba(0,0,0,0.8));}#f2_viz_text{left:274px;top:43px;width:46px;height:14px;z-index:26;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:10px;line-height:13px;letter-spacing:0px;color:#FFFFFF;text-align:left;opacity:1;white-space:nowrap;text-shadow:0px 2px 5px rgba(0,0,0,0.95), 0px 2px 8px rgba(0,0,0,0.7);}#f2_to{left:138px;top:25px;width:17px;height:13px;z-index:12;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:10px;line-height:10.8px;letter-spacing:0px;color:#070707;text-align:center;opacity:1;white-space:nowrap;}#f2_discount{left:139.26px;top:22.16px;width:50.49px;height:31.68px;z-index:12;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:30.69px;line-height:29.5px;letter-spacing:0px;color:#070707;text-align:left;opacity:1;white-space:nowrap;}#f3_legal{left:4px;top:19px;width:312px;height:37px;z-index:8;font-family:"DIN Pro Condensed",sans-serif;font-weight:500;font-size:10px;line-height:10px;letter-spacing:0px;color:#000000;text-align:center;opacity:0.7;white-space:normal;}
+/* QUICK PREVIEW v2: continuous photo/logo/pin/CENTER across ad frames. */
+#f1,#f2{z-index:1}#f3{z-index:4}
+#f1_photo,#f2_photo,#f1_photo_corner_shade,#f2_photo_corner_shade,
+#f1_logo,#f2_logo,#f1_viz_pin,#f2_viz_pin,#f1_viz_text,#f2_viz_text{display:none!important}
+.common-group{position:absolute;inset:0;pointer-events:none;animation:commonAdVisibility 12s linear infinite}
+#common_bg{z-index:0}#common_fg{z-index:3}
+@keyframes commonAdVisibility{0%,66.64%{opacity:1}66.67%,100%{opacity:0}}
+#shared_photo{left:163px;top:0;width:157px;height:60px;z-index:2;object-fit:cover;object-position:center top}
+#shared_shade{left:202px;top:17px;width:118px;height:43px;z-index:20;object-fit:fill}
+#shared_logo{left:5px;top:23px;width:27px;height:28px;z-index:7;object-fit:fill;transform-origin:center center;animation:sharedLogoIntro 12s ease-out infinite}
+@keyframes sharedLogoIntro{0%{transform:scale(.76);opacity:0}6%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}
+#shared_pin{left:272px;top:43px;width:10px;height:14px;z-index:25;object-fit:fill;filter:drop-shadow(0 2px 3px rgba(0,0,0,.8));animation:sharedCenterIntro 12s ease-out infinite}
+#shared_center{left:284px;top:43px;width:46px;height:14px;z-index:26;font-family:"DIN Pro Condensed",sans-serif;font-weight:700;font-size:10px;line-height:13px;letter-spacing:0;color:#fff;white-space:nowrap;text-shadow:0 2px 5px rgba(0,0,0,.95),0 2px 8px rgba(0,0,0,.7);animation:sharedCenterIntro 12s ease-out infinite}
+@keyframes sharedCenterIntro{0%,3%{transform:translateY(6px);opacity:0}9%,100%{transform:translateY(0);opacity:1}}
+.banner:not(.fonts-ready) .common-group,.banner:not(.fonts-ready) #shared_logo,.banner:not(.fonts-ready) #shared_pin,.banner:not(.fonts-ready) #shared_center{animation-play-state:paused}
+
+/* Approved quick preview v4, exact overrides, no other motion or design changes */
+#f2_headline,#f2_to,#f2_discount{animation-name:riseF2;animation-duration:12s;animation-timing-function:ease-out;animation-iteration-count:infinite}
+#shared_center{font-size:12px;line-height:14px}
+@keyframes commonAdVisibility{0%,62.5%{opacity:1}66.6667%,100%{opacity:0}}
+
+/* QA R003 minimum technical fixes: preserve legal frame box and glyphs inside it */
+#f3_legal{padding-top:1px}
+.technical-strip{position:absolute;left:0;top:0;width:320px;height:18px;opacity:0;pointer-events:none;z-index:0}
