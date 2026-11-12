@@ -1,5 +1,5 @@
-@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedMedium.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedBold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedMedium.woff2") format("woff2");font-weight:500;font-display:block}
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedBold.woff2") format("woff2");font-weight:700;font-display:block}
 *{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;background:transparent}body{overflow:hidden}.click-area{position:relative;width:100%;height:200px;background:#FFEC01;cursor:pointer;overflow:hidden}.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;background:#FFEC01;color:#000;font-family:DINProCondensed,sans-serif}.common{position:absolute;pointer-events:none}.headline-motion{opacity:0}.contacts-motion{opacity:0}.legal-motion{opacity:0}
 .c-photo{left:500px;top:0px;width:700px;height:200px;object-fit:cover;object-position:center top}
 .c-card{left:117px;top:0px;width:400px;height:148px;object-fit:fill;object-position:center center}
@@ -23,6 +23,10 @@
 #f2_headline{animation:secondHeadline 12s ease-in-out infinite}
 #f1_site,#f1_phone{animation:contacts 12s ease-in-out infinite}
 #f2_legal{animation:legal 12s ease-in-out infinite}
+
+/* TECH FIX v8 — hold the approved 12s motion at t=0 until both DINPro WOFF2 faces are ready. */
+.banner:not(.fonts-ready) .c-card,.banner:not(.fonts-ready) .c-logo,.banner:not(.fonts-ready) .c-viz_pin,.banner:not(.fonts-ready) .c-viz_text,.banner:not(.fonts-ready) #f1_headline,.banner:not(.fonts-ready) #f1_site,.banner:not(.fonts-ready) #f1_phone,.banner:not(.fonts-ready) #f2_headline,.banner:not(.fonts-ready) #f2_legal{animation-play-state:paused!important}
+.banner:not(.fonts-ready) .c-viz_text,.banner:not(.fonts-ready) #f1_headline,.banner:not(.fonts-ready) #f1_site,.banner:not(.fonts-ready) #f1_phone,.banner:not(.fonts-ready) #f2_headline,.banner:not(.fonts-ready) #f2_legal{visibility:hidden}
 @keyframes cardDownAndOut{
   0%,1%{opacity:0;transform:translate3d(0,-24px,0)}
   7%{opacity:1;transform:translate3d(0,0,0)}
