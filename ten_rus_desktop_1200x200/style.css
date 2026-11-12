@@ -1,0 +1,70 @@
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedMedium.ttf") format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedBold.ttf") format("truetype");font-weight:700;font-display:swap}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;background:transparent}body{overflow:hidden}.click-area{position:relative;width:100%;height:200px;background:#FFEC01;cursor:pointer;overflow:hidden}.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:hidden;background:#FFEC01;color:#000;font-family:DINProCondensed,sans-serif}.common{position:absolute;pointer-events:none}.headline-motion{opacity:0}.contacts-motion{opacity:0}.legal-motion{opacity:0}
+.c-photo{left:500px;top:0px;width:700px;height:200px;object-fit:cover;object-position:center top}
+.c-card{left:117px;top:0px;width:400px;height:148px;object-fit:fill;object-position:center center}
+.c-logo{left:3px;top:0px;width:75px;height:75px;object-fit:contain;object-position:center center}
+.c-viz_pin{left:1073px;top:146px;width:28px;height:40px;object-fit:contain;object-position:center center;filter:drop-shadow(1px 3px 5px rgba(0,0,0,.95)) drop-shadow(0px 0px 2px rgba(0,0,0,.85))}
+.c-viz_text{left:1107px;top:146px;width:85px;height:47px;white-space:pre-wrap;font-family:DINProCondensed;font-weight:700;font-size:42px;line-height:43px;color:#FFFFFF;text-align:left;text-shadow:1px 3px 6px rgba(0,0,0,.95), 0 0 3px rgba(0,0,0,.85)}
+#f1_headline{left:160px;top:12px;width:359px;height:126px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:54px;line-height:56px;font-weight:700;letter-spacing:0px;color:#090909;text-align:left}
+#f1_site{left:163.5px;top:159px;width:156px;height:31px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:25px;line-height:24px;font-weight:500;letter-spacing:0px;color:#000000;text-align:left}
+#f1_phone{left:325.5px;top:159px;width:174px;height:29px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:25px;line-height:24px;font-weight:500;letter-spacing:0px;color:#000000;text-align:left}
+#f2_headline{left:160px;top:12px;width:359px;height:126px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:54px;line-height:56px;font-weight:700;letter-spacing:0px;color:#090909;text-align:left}
+#f2_legal{left:129px;top:160px;width:380px;height:33px;position:absolute;white-space:pre-wrap;overflow:visible;font-family:DINProCondensed;font-size:14px;line-height:14.75px;font-weight:500;letter-spacing:0px;color:rgba(0,0,0,.5);text-align:left}
+
+/* DEV QUICK PREVIEW v6 — user-approved geometry unchanged. 12s cycle:
+   smoother first headline entrance, second copy fades before card,
+   card/logo/viz share a linear fade at 84–95.833%, blank interval 11.5–12s (0.5 second). */
+.c-card{opacity:0;animation:cardDownAndOut 12s cubic-bezier(.22,.61,.36,1) infinite;transform-origin:center top;will-change:transform,opacity}
+.c-logo{opacity:0;animation:logoIn 12s ease-in-out infinite;will-change:transform,opacity}
+.c-viz_pin{opacity:0;animation:vizPinIn 12s ease-in-out infinite;transform-origin:center bottom;will-change:transform,opacity}
+.c-viz_text{opacity:0;animation:vizTextIn 12s ease-in-out infinite;will-change:transform,opacity}
+#f1_headline{animation:firstHeadline 12s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform,opacity}
+#f2_headline{animation:secondHeadline 12s ease-in-out infinite}
+#f1_site,#f1_phone{animation:contacts 12s ease-in-out infinite}
+#f2_legal{animation:legal 12s ease-in-out infinite}
+@keyframes cardDownAndOut{
+  0%,1%{opacity:0;transform:translate3d(0,-24px,0)}
+  7%{opacity:1;transform:translate3d(0,0,0)}
+  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes logoIn{
+  0%,3%{opacity:0;transform:translate3d(0,-12px,0)}
+  10%{opacity:1;transform:translate3d(0,0,0)}
+  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes vizPinIn{
+  0%,7%{opacity:0;transform:translate3d(0,-15px,0)}
+  15%{opacity:1;transform:translate3d(0,0,0)}
+  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes vizTextIn{
+  0%,9%{opacity:0;transform:translate3d(0,-12px,0)}
+  16%{opacity:1;transform:translate3d(0,0,0)}
+  84%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.833%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes firstHeadline{
+  0%{opacity:0;transform:translate3d(0,-8px,0)}
+  8%{opacity:1;transform:translate3d(0,0,0)}
+  36%{opacity:1;transform:translate3d(0,0,0)}
+  42%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes contacts{
+  0%,11%{opacity:0;transform:translate3d(0,-8px,0)}
+  17%,36%{opacity:1;transform:translate3d(0,0,0)}
+  42%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes secondHeadline{
+  0%,45%{opacity:0;transform:translate3d(0,-13px,0)}
+  52%,76%{opacity:1;transform:translate3d(0,0,0)}
+  82%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes legal{
+  0%,49%{opacity:0;transform:translate3d(0,-8px,0)}
+  55%,76%{opacity:1;transform:translate3d(0,0,0)}
+  82%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
