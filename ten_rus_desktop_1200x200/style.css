@@ -1,0 +1,64 @@
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedMedium.woff") format("woff");font-weight:500;font-display:block}
+@font-face{font-family:DINProCondensed;src:url("fonts/DINPro-CondensedBold.woff") format("woff");font-weight:700;font-display:block}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;background:transparent}body{overflow:hidden}.click-area::after{content:"";position:absolute;inset:0;border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05);pointer-events:none;z-index:20}.click-area{position:relative;width:100%;height:200px;background:linear-gradient(180deg,#FFFFFF 0%,#FFFDF1 16%,#FFFCBC 52%,#FFEC01 100%);cursor:pointer;overflow:hidden}.banner{position:relative;width:1200px;height:200px;margin:0 auto;overflow:visible;font-family:DINProCondensed,Arial,sans-serif}.layer{position:absolute;pointer-events:none}.layer img{display:block;width:100%;height:100%;object-fit:contain}.ogo-crop{overflow:hidden;clip-path:inset(.93px 0 .93px 0)}.ogo-crop img{position:absolute;top:.930232558px;left:0;width:432px;height:213.488372093px;object-fit:fill}.banner:not(.fonts-ready) .motion{animation-play-state:paused!important}.banner:not(.fonts-ready) .text{visibility:hidden}.motion{animation-duration:10.5s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.22,.61,.36,1)}.first{animation-name:firstHeadline}.contact{animation-name:contacts;animation-timing-function:ease-in-out}.second{animation-name:secondHeadline}.legal{animation-name:legal;animation-timing-function:ease-in-out}.brand,.hero{animation:none}
+@keyframes cardDownAndOut{
+  0%,1.142857%{opacity:0;transform:translate3d(0,-24px,0)}
+  8%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes logoIn{
+  0%,3.428571%{opacity:0;transform:translate3d(0,-12px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes vizPinIn{
+  0%,4.571429%{opacity:0;transform:translate3d(0,-15px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes vizTextIn{
+  0%,4.571429%{opacity:0;transform:translate3d(0,-12px,0)}
+  11.428571%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes firstHeadline{
+  0%{opacity:0;transform:scale(.85);animation-timing-function:cubic-bezier(.2,.65,.3,1)}
+  4.285714286%{opacity:1;transform:scale(1.045);animation-timing-function:ease-in-out}
+  6.857142857%{opacity:1;transform:scale(1)}
+  43.619048%{opacity:1;transform:scale(1);animation-timing-function:ease-in-out}
+  47.619048%,100%{opacity:0;transform:scale(1)}
+}
+@keyframes contacts{
+  0%,8%{opacity:0;transform:translate3d(0,-8px,0)}
+  12.571429%{opacity:1;transform:translate3d(0,0,0)}
+  43.619048%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:ease-in-out}
+  47.619048%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes secondHeadline{
+  0%,47.619048%{opacity:0;transform:translate3d(0,-8px,0)}
+  53.333333%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+@keyframes legal{
+  0%,48.761905%{opacity:0;transform:translate3d(0,0,0)}
+  53.333333%{opacity:1;transform:translate3d(0,0,0)}
+  90.47619%{opacity:1;transform:translate3d(0,0,0);animation-timing-function:linear}
+  95.238095%,100%{opacity:0;transform:translate3d(0,0,0)}
+}
+
+#logo{left:1133px;top:0px;width:67px;height:64px;z-index:9;}
+#ogo{left:692px;top:6px;width:432px;height:194px;z-index:7;}
+#f1_headline{left:-30px;top:11px;width:564px;height:145px;z-index:10;overflow:visible;}#f1_headline img{position:absolute;left:30px;top:0;width:534px;height:145px;transform-origin:50% 50%;}.banner:not(.fonts-ready) #f1_headline img{animation-play-state:paused!important}
+#f1_site{left:0px;top:166px;width:174px;height:27px;z-index:8;font-family:DINProCondensed,Arial,sans-serif;font-size:26px;line-height:25px;font-weight:500;letter-spacing:0px;color:#050505;text-align:left;white-space:pre;overflow:visible;}
+#f1_phone{left:169.5px;top:166px;width:210px;height:27px;z-index:8;font-family:DINProCondensed,Arial,sans-serif;font-size:26px;line-height:25px;font-weight:500;letter-spacing:0px;color:#050505;text-align:left;white-space:pre;overflow:visible;}
+#f2_legal{left:2px;top:163px;width:685px;height:37px;z-index:8;font-family:DINProCondensed,Arial,sans-serif;font-size:16px;line-height:16px;font-weight:500;letter-spacing:0px;color:rgba(0,0,0,0.5);text-align:left;white-space:pre-wrap;overflow:visible;}
+#f2_offer_line1{left:0px;top:25.5px;width:293px;height:74px;z-index:10;font-family:DINProCondensed,Arial,sans-serif;font-size:70px;line-height:60px;font-weight:700;letter-spacing:0px;color:#000000;text-align:left;white-space:pre;overflow:visible;}
+#f2_offer_line2{left:0px;top:84px;width:350px;height:60px;z-index:10;font-family:DINProCondensed,Arial,sans-serif;font-size:70px;line-height:58px;font-weight:700;letter-spacing:0px;color:#000000;text-align:left;white-space:pre;overflow:visible;}
+#f2_offer_to{left:339.5px;top:56px;width:47px;height:45px;z-index:10;font-family:DINProCondensed,Arial,sans-serif;font-size:28px;line-height:28px;font-weight:700;letter-spacing:0px;color:#000000;text-align:center;white-space:pre;overflow:visible;}
+#f2_offer_number{left:340.5px;top:28px;width:210px;height:117px;z-index:10;font-family:DINProCondensed,Arial,sans-serif;font-size:150px;line-height:110px;font-weight:700;letter-spacing:0px;color:#000000;text-align:left;white-space:pre;overflow:visible;}
+#f2_offer_percent{left:505px;top:61.5px;width:89px;height:95px;z-index:10;font-family:DINProCondensed,Arial,sans-serif;font-size:100px;line-height:80px;font-weight:700;letter-spacing:0px;color:#050505;text-align:left;white-space:pre;overflow:visible;}
